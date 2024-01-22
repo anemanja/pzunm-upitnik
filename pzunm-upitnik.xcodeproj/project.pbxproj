@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EF51D6132AF0FA7C0081CD36 /* pzunm_upitnikApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51D6122AF0FA7C0081CD36 /* pzunm_upitnikApp.swift */; };
-		EF51D6152AF0FA7C0081CD36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51D6142AF0FA7C0081CD36 /* ContentView.swift */; };
 		EF51D6172AF0FA7F0081CD36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF51D6162AF0FA7F0081CD36 /* Assets.xcassets */; };
 		EF51D61A2AF0FA7F0081CD36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF51D6192AF0FA7F0081CD36 /* Preview Assets.xcassets */; };
 		EF51D6252AF0FA7F0081CD36 /* pzunm_upitnikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51D6242AF0FA7F0081CD36 /* pzunm_upitnikTests.swift */; };
@@ -16,6 +15,27 @@
 		EF51D6312AF0FA7F0081CD36 /* pzunm_upitnikUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51D6302AF0FA7F0081CD36 /* pzunm_upitnikUITestsLaunchTests.swift */; };
 		EF51D63F2AF0FBDE0081CD36 /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF51D63E2AF0FBDE0081CD36 /* PDFKit.framework */; };
 		EF51D6412AF0FC0D0081CD36 /* PencilKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF51D6402AF0FC0D0081CD36 /* PencilKit.framework */; };
+		EFE1D54F2B5819AC008AAEDD /* NMQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D54E2B5819AC008AAEDD /* NMQuestion.swift */; };
+		EFE1D5512B581A83008AAEDD /* LocalizationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5502B581A83008AAEDD /* LocalizationKeys.swift */; };
+		EFE1D5532B5821B5008AAEDD /* NMQuestionnaireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5522B5821B5008AAEDD /* NMQuestionnaireViewModel.swift */; };
+		EFE1D5552B588546008AAEDD /* NMQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5542B588545008AAEDD /* NMQuestionView.swift */; };
+		EFE1D5572B59A56C008AAEDD /* NMQuestionnaireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5562B59A56C008AAEDD /* NMQuestionnaireView.swift */; };
+		EFE1D55B2B59B214008AAEDD /* NMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D55A2B59B214008AAEDD /* NMClient.swift */; };
+		EFE1D55D2B5A9EDF008AAEDD /* NMLanguagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D55C2B5A9EDF008AAEDD /* NMLanguagesView.swift */; };
+		EFE1D55F2B5A9EEC008AAEDD /* NMMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D55E2B5A9EEC008AAEDD /* NMMainView.swift */; };
+		EFE1D56A2B5AA00D008AAEDD /* NMAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5692B5AA00D008AAEDD /* NMAuthenticationService.swift */; };
+		EFE1D56C2B5AA021008AAEDD /* NMClientsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D56B2B5AA021008AAEDD /* NMClientsService.swift */; };
+		EFE1D56E2B5AA047008AAEDD /* NMQuestionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D56D2B5AA047008AAEDD /* NMQuestionsService.swift */; };
+		EFE1D5702B5AA09A008AAEDD /* NMPDFService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D56F2B5AA09A008AAEDD /* NMPDFService.swift */; };
+		EFE1D5722B5AA0B8008AAEDD /* NMLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5712B5AA0B8008AAEDD /* NMLanguage.swift */; };
+		EFE1D5742B5AA279008AAEDD /* NMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5732B5AA279008AAEDD /* NMUser.swift */; };
+		EFE1D5772B5AA39A008AAEDD /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5752B5AA399008AAEDD /* GenericError.swift */; };
+		EFE1D5782B5AA39A008AAEDD /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5762B5AA399008AAEDD /* Logger.swift */; };
+		EFE1D57B2B5AA4C4008AAEDD /* MockRepositoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D57A2B5AA4C4008AAEDD /* MockRepositoryModule.swift */; };
+		EFE1D57D2B5AAF5A008AAEDD /* ServiceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D57C2B5AAF5A008AAEDD /* ServiceModule.swift */; };
+		EFE1D57F2B5AB774008AAEDD /* NMMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D57E2B5AB774008AAEDD /* NMMainViewModel.swift */; };
+		EFE1D5822B5B1831008AAEDD /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5812B5B1831008AAEDD /* CoordinatorView.swift */; };
+		EFE1D5852B5B25F6008AAEDD /* CoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5842B5B25F6008AAEDD /* CoordinatorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +58,6 @@
 /* Begin PBXFileReference section */
 		EF51D60F2AF0FA7C0081CD36 /* pzunm-upitnik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pzunm-upitnik.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF51D6122AF0FA7C0081CD36 /* pzunm_upitnikApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pzunm_upitnikApp.swift; sourceTree = "<group>"; };
-		EF51D6142AF0FA7C0081CD36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EF51D6162AF0FA7F0081CD36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF51D6192AF0FA7F0081CD36 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EF51D61B2AF0FA7F0081CD36 /* pzunm_upitnik.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pzunm_upitnik.entitlements; sourceTree = "<group>"; };
@@ -49,6 +68,28 @@
 		EF51D6302AF0FA7F0081CD36 /* pzunm_upitnikUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pzunm_upitnikUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EF51D63E2AF0FBDE0081CD36 /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/PDFKit.framework; sourceTree = DEVELOPER_DIR; };
 		EF51D6402AF0FC0D0081CD36 /* PencilKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PencilKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/PencilKit.framework; sourceTree = DEVELOPER_DIR; };
+		EFE1D54E2B5819AC008AAEDD /* NMQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMQuestion.swift; sourceTree = "<group>"; };
+		EFE1D5502B581A83008AAEDD /* LocalizationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationKeys.swift; sourceTree = "<group>"; };
+		EFE1D5522B5821B5008AAEDD /* NMQuestionnaireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMQuestionnaireViewModel.swift; sourceTree = "<group>"; };
+		EFE1D5542B588545008AAEDD /* NMQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMQuestionView.swift; sourceTree = "<group>"; };
+		EFE1D5562B59A56C008AAEDD /* NMQuestionnaireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMQuestionnaireView.swift; sourceTree = "<group>"; };
+		EFE1D55A2B59B214008AAEDD /* NMClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMClient.swift; sourceTree = "<group>"; };
+		EFE1D55C2B5A9EDF008AAEDD /* NMLanguagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMLanguagesView.swift; sourceTree = "<group>"; };
+		EFE1D55E2B5A9EEC008AAEDD /* NMMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMMainView.swift; sourceTree = "<group>"; };
+		EFE1D5692B5AA00D008AAEDD /* NMAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMAuthenticationService.swift; sourceTree = "<group>"; };
+		EFE1D56B2B5AA021008AAEDD /* NMClientsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMClientsService.swift; sourceTree = "<group>"; };
+		EFE1D56D2B5AA047008AAEDD /* NMQuestionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMQuestionsService.swift; sourceTree = "<group>"; };
+		EFE1D56F2B5AA09A008AAEDD /* NMPDFService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMPDFService.swift; sourceTree = "<group>"; };
+		EFE1D5712B5AA0B8008AAEDD /* NMLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMLanguage.swift; sourceTree = "<group>"; };
+		EFE1D5732B5AA279008AAEDD /* NMUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMUser.swift; sourceTree = "<group>"; };
+		EFE1D5752B5AA399008AAEDD /* GenericError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
+		EFE1D5762B5AA399008AAEDD /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		EFE1D57A2B5AA4C4008AAEDD /* MockRepositoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryModule.swift; sourceTree = "<group>"; };
+		EFE1D57C2B5AAF5A008AAEDD /* ServiceModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModule.swift; sourceTree = "<group>"; };
+		EFE1D57E2B5AB774008AAEDD /* NMMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMMainViewModel.swift; sourceTree = "<group>"; };
+		EFE1D5812B5B1831008AAEDD /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		EFE1D5842B5B25F6008AAEDD /* CoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorViewModel.swift; sourceTree = "<group>"; };
+		EFE1D5862B5EAD96008AAEDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +143,14 @@
 		EF51D6112AF0FA7C0081CD36 /* pzunm-upitnik */ = {
 			isa = PBXGroup;
 			children = (
+				EFE1D5862B5EAD96008AAEDD /* Info.plist */,
+				EFE1D5792B5AA4AC008AAEDD /* Repository */,
+				EFE1D5682B5A9FF6008AAEDD /* Services */,
+				EFE1D5582B59B1F8008AAEDD /* Model */,
+				EFE1D5592B59B202008AAEDD /* View */,
+				EFE1D5832B5B25DC008AAEDD /* Coordinator */,
 				EF51D6122AF0FA7C0081CD36 /* pzunm_upitnikApp.swift */,
-				EF51D6142AF0FA7C0081CD36 /* ContentView.swift */,
+				EFE1D5502B581A83008AAEDD /* LocalizationKeys.swift */,
 				EF51D6162AF0FA7F0081CD36 /* Assets.xcassets */,
 				EF51D61B2AF0FA7F0081CD36 /* pzunm_upitnik.entitlements */,
 				EF51D6182AF0FA7F0081CD36 /* Preview Content */,
@@ -143,6 +190,117 @@
 				EF51D63E2AF0FBDE0081CD36 /* PDFKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFE1D5582B59B1F8008AAEDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D5672B5A9FE5008AAEDD /* Client */,
+				EFE1D5732B5AA279008AAEDD /* NMUser.swift */,
+				EFE1D5752B5AA399008AAEDD /* GenericError.swift */,
+				EFE1D5762B5AA399008AAEDD /* Logger.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EFE1D5592B59B202008AAEDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D5622B5A9F34008AAEDD /* Client */,
+				EFE1D5612B5A9F1F008AAEDD /* Main */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EFE1D5612B5A9F1F008AAEDD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D55E2B5A9EEC008AAEDD /* NMMainView.swift */,
+				EFE1D57E2B5AB774008AAEDD /* NMMainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EFE1D5622B5A9F34008AAEDD /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D5632B5A9F3F008AAEDD /* Questionnaire */,
+				EFE1D5642B5A9F4D008AAEDD /* Languages */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		EFE1D5632B5A9F3F008AAEDD /* Questionnaire */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D5802B5AC7DF008AAEDD /* Question */,
+				EFE1D5522B5821B5008AAEDD /* NMQuestionnaireViewModel.swift */,
+				EFE1D5562B59A56C008AAEDD /* NMQuestionnaireView.swift */,
+			);
+			path = Questionnaire;
+			sourceTree = "<group>";
+		};
+		EFE1D5642B5A9F4D008AAEDD /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D55C2B5A9EDF008AAEDD /* NMLanguagesView.swift */,
+			);
+			path = Languages;
+			sourceTree = "<group>";
+		};
+		EFE1D5652B5A9FAB008AAEDD /* Questionnaire */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D54E2B5819AC008AAEDD /* NMQuestion.swift */,
+			);
+			path = Questionnaire;
+			sourceTree = "<group>";
+		};
+		EFE1D5672B5A9FE5008AAEDD /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D5652B5A9FAB008AAEDD /* Questionnaire */,
+				EFE1D55A2B59B214008AAEDD /* NMClient.swift */,
+				EFE1D5712B5AA0B8008AAEDD /* NMLanguage.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		EFE1D5682B5A9FF6008AAEDD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D57C2B5AAF5A008AAEDD /* ServiceModule.swift */,
+				EFE1D5692B5AA00D008AAEDD /* NMAuthenticationService.swift */,
+				EFE1D56B2B5AA021008AAEDD /* NMClientsService.swift */,
+				EFE1D56D2B5AA047008AAEDD /* NMQuestionsService.swift */,
+				EFE1D56F2B5AA09A008AAEDD /* NMPDFService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EFE1D5792B5AA4AC008AAEDD /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D57A2B5AA4C4008AAEDD /* MockRepositoryModule.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		EFE1D5802B5AC7DF008AAEDD /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D5542B588545008AAEDD /* NMQuestionView.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		EFE1D5832B5B25DC008AAEDD /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D5812B5B1831008AAEDD /* CoordinatorView.swift */,
+				EFE1D5842B5B25F6008AAEDD /* CoordinatorViewModel.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +389,10 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
+				"sr-RS",
+				ru,
+				"sq-AL",
 			);
 			mainGroup = EF51D6062AF0FA7C0081CD36;
 			productRefGroup = EF51D6102AF0FA7C0081CD36 /* Products */;
@@ -275,8 +437,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF51D6152AF0FA7C0081CD36 /* ContentView.swift in Sources */,
+				EFE1D55D2B5A9EDF008AAEDD /* NMLanguagesView.swift in Sources */,
+				EFE1D5742B5AA279008AAEDD /* NMUser.swift in Sources */,
+				EFE1D54F2B5819AC008AAEDD /* NMQuestion.swift in Sources */,
+				EFE1D56E2B5AA047008AAEDD /* NMQuestionsService.swift in Sources */,
+				EFE1D55B2B59B214008AAEDD /* NMClient.swift in Sources */,
+				EFE1D5722B5AA0B8008AAEDD /* NMLanguage.swift in Sources */,
+				EFE1D56A2B5AA00D008AAEDD /* NMAuthenticationService.swift in Sources */,
+				EFE1D5772B5AA39A008AAEDD /* GenericError.swift in Sources */,
+				EFE1D5512B581A83008AAEDD /* LocalizationKeys.swift in Sources */,
+				EFE1D57D2B5AAF5A008AAEDD /* ServiceModule.swift in Sources */,
+				EFE1D57F2B5AB774008AAEDD /* NMMainViewModel.swift in Sources */,
+				EFE1D57B2B5AA4C4008AAEDD /* MockRepositoryModule.swift in Sources */,
 				EF51D6132AF0FA7C0081CD36 /* pzunm_upitnikApp.swift in Sources */,
+				EFE1D55F2B5A9EEC008AAEDD /* NMMainView.swift in Sources */,
+				EFE1D5572B59A56C008AAEDD /* NMQuestionnaireView.swift in Sources */,
+				EFE1D5782B5AA39A008AAEDD /* Logger.swift in Sources */,
+				EFE1D5702B5AA09A008AAEDD /* NMPDFService.swift in Sources */,
+				EFE1D5532B5821B5008AAEDD /* NMQuestionnaireViewModel.swift in Sources */,
+				EFE1D5822B5B1831008AAEDD /* CoordinatorView.swift in Sources */,
+				EFE1D56C2B5AA021008AAEDD /* NMClientsService.swift in Sources */,
+				EFE1D5552B588546008AAEDD /* NMQuestionView.swift in Sources */,
+				EFE1D5852B5B25F6008AAEDD /* CoordinatorViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +623,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "pzunm-upitnik/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "NM Upitnik";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -477,6 +660,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "pzunm-upitnik/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "NM Upitnik";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
