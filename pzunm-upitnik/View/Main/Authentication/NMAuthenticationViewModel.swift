@@ -18,6 +18,9 @@ final class NMAuthenticationViewModel: LoadingObject {
 
     func login(with username: String, and password: String) {
         Task {
+            await MainActor.run {
+                state = .loading(0.0)
+            }
             let result = await authenticationService.authenticateUser(with: username, and: password)
             await MainActor.run {
                 switch result {
@@ -30,5 +33,7 @@ final class NMAuthenticationViewModel: LoadingObject {
         }
     }
     
-    func load() {}
+    func logout() {
+        state = .idle
+    }
 }

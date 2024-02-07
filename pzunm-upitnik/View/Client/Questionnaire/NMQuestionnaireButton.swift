@@ -8,13 +8,49 @@
 import SwiftUI
 
 struct NMQuestionnaireButton: View {
+    @State var isSelected = false
+    var systemName: String
+    @State var answerSelection: Bool
+    @Binding var answer: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(systemName: "\(systemName).circle" + (isSelected ? ".fill" : ""))
+                .questionnaireButtonModifier()
+                .onTapGesture {
+                    isSelected.toggle()
+                    answer = (answerSelection == isSelected)
+                }
+        }
     }
 }
 
 struct NMQuestionnaireButton_Previews: PreviewProvider {
+    @State static var isSelected = true
     static var previews: some View {
-        NMQuestionnaireButton()
+        NMQuestionnaireButton(systemName: "checkmark", answerSelection: true, answer: $isSelected)
+    }
+}
+
+extension Image {
+    func questionnaireButtonModifier() -> some View {
+        self
+            .resizable()
+            .scaledToFit()
+    }
+}
+
+extension View {
+    func conditionalShadow(enabled: Bool,
+                           color: Color = Color(.sRGBLinear, white: 0, opacity: 0.33),
+                           radius: CGFloat,
+                           x: CGFloat = 0.0, y: CGFloat = 0.0) -> some View {
+        if enabled {
+            return self
+                .shadow(color: color, radius: radius, x: x, y: y)
+        } else {
+            return self
+                .shadow(radius: 0.0)
+        }
     }
 }

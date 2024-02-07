@@ -10,5 +10,4 @@ import Foundation
 protocol LoadingObject: ObservableObject {
     associatedtype Output
     var state: LoadingState<Output> { get }
-    func load()
 }

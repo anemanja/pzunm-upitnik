@@ -8,16 +8,39 @@
 import Foundation
 
 public struct NMQuestion: Identifiable, Hashable, Codable {
-    public let id: String
+    private static var count = 0
+    public let id: Int
     let formulation: String
-    var answer: Bool
+    var answer: NMAnswer = .none
     var explanation: String
     
-    init(formulation: String, answer: Bool = false, explanation: String = "") {
-        self.id = formulation
+    init(formulation: String, answer: NMAnswer = .none, explanation: String = "") {
+        NMQuestion.incrementCount()
+        self.id = NMQuestion.count
         self.formulation = formulation
         self.answer = answer
         self.explanation = explanation
+    }
+    
+    private static func incrementCount() {
+        count += 1
+    }
+}
+
+public enum NMAnswer: Codable {
+    case yes
+    case no
+    case none
+    
+    public var text: String {
+        switch self {
+        case .yes:
+            return "DA"
+        case .no:
+            return "NE"
+        case .none:
+            return ""
+        }
     }
 }
 

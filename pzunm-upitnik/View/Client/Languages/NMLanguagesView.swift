@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NMLanguagesView: View {
+    @EnvironmentObject var coordinatorViewModel: CoordinatorViewModel
     @State var client: NMClient
     
     var body: some View {
@@ -17,7 +18,14 @@ struct NMLanguagesView: View {
                 .foregroundColor(.red)
             List {
                 ForEach(NMLanguage.allCases, id: \.self) { language in
-                    Text(language.rawValue)
+                    HStack {
+                        Text(language.rawValue)
+                        Spacer()
+                    }
+                    .onTapGesture {
+                        client.language = language
+                        coordinatorViewModel.present(with: client)
+                    }
                 }
             }
         }
@@ -30,5 +38,6 @@ struct NMLanguagesView_Previews: PreviewProvider {
                                          name: "Nemanja", surname: "Avramović",
                                          language: nil,
                                          hasCompletedQuestionnaire: false))
+        .environmentObject(CoordinatorViewModel())
     }
 }

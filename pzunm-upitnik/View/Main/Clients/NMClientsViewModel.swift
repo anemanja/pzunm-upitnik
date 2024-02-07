@@ -15,22 +15,23 @@ final class NMClientsViewModel: LoadingObject {
         self.clientsService = clientsService
     }
     
-    func load(user: NMUser?) {
+    func load(includingCompleted shouldIncludeCompleted: Bool = false) {
         Task {
-            state = .loading(0.0)
-            let result = await clientsService.getClients(for: user)
+            await MainActor.run {
+                state = .loading(0.0)
+            }
+            
+            let result = await clientsService.getClients(includingCompleted: shouldIncludeCompleted)
             await MainActor.run {
                 switch result {
                 case .success(let clients):
-                    state = .loaded(clients)
+                    state = .loaded(clients.sorted {
+                        $0.hasCompletedQuestionnaire && !$1.hasCompletedQuestionnaire
+                    })
                 case .failure(let error):
                     state = .failed(error)
                 }
             }
         }
-    }
-    
-    func load() {
-        load(user: nil)
     }
 }

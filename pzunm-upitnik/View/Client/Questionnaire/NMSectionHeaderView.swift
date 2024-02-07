@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct NMSectionHeaderView: View {
+    @State var text: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text(text)
+                .font(.headline.lowercaseSmallCaps())
+            Spacer()
+        }
     }
 }
 
 struct NMSectionHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        NMSectionHeaderView()
+        NMSectionHeaderView(text: "Section Header")
+            .foregroundColor(NMPalette.foreground.color)
     }
 }

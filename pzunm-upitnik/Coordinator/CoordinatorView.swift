@@ -14,12 +14,20 @@ struct CoordinatorView: View {
         NavigationStack(path: $viewModel.path) {
             NMMainView()
                 .navigationDestination(for: NMClient.self) { client in
-                    if client.language != nil {
+                    if client.language == nil {
                         NMLanguagesView(client: client)
                     } else {
                         NMQuestionnaireView(client: client)
                     }
                 }
+        }
+        .fullScreenCover(isPresented: $viewModel.shouldCover) {
+            if let coverData = viewModel.questionnairePreviewCoverData {
+                NMQuestionnairePreviewView(questionnairePreview: coverData)
+                    .interactiveDismissDisabled()
+            } else {
+                Text("Invalid view data.")
+            }
         }
     }
 }

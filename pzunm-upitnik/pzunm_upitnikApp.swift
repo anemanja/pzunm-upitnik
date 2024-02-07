@@ -16,8 +16,10 @@ struct pzunm_upitnikApp: App {
         WindowGroup {
             CoordinatorView()
                 .environmentObject(CoordinatorViewModel())
-                .environmentObject(NMMainViewModel(
-                    authenticationService: services.authentication,
+                .environmentObject(NMAuthenticationViewModel(
+                    authenticationService: services.authentication
+                ))
+                .environmentObject(NMClientsViewModel(
                     clientsService: services.clients
                 ))
                 .environmentObject(NMQuestionnaireViewModel(

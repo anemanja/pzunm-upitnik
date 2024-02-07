@@ -29,31 +29,3 @@ public enum GenericError: Error, CustomStringConvertible {
         }
     }
 }
-
-public struct ProgressTracker {
-    private(set) var currentState: ProgressState = .off
-    private(set) var error: GenericError?
-    
-    enum ProgressState {
-        case off
-        case on
-        case failed
-    }
-    
-    mutating func start() {
-        setup(currentState: .on)
-    }
-    
-    mutating func reset() {
-        setup(currentState: .off)
-    }
-    
-    mutating func failed(with error: GenericError) {
-        setup(currentState: .failed, error: error)
-    }
-    
-    private mutating func setup(currentState: ProgressState, error: GenericError? = nil) {
-        self.currentState = currentState
-        self.error = error
-    }
-}

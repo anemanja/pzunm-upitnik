@@ -33,15 +33,23 @@ struct LargeTextInputView: View {
     private var title: String
     private var minLineCount: Int
     private var maxLineCount: Int
+    private var doneTitle: String
+    private var onDone: () -> Void
     
-    init(_ title: String, text: Binding<String>, minLineCount: Int = 1, maxLineCount: Int = 4) {
+    init(_ title: String, text: Binding<String>,
+         minLineCount: Int = 1, maxLineCount: Int = 4,
+         doneTitle: String = "Done", onDone: @escaping () -> Void
+    ) {
         self.title = title
         self.minLineCount = minLineCount
         self.maxLineCount = maxLineCount
         self._text = text
+        self.doneTitle = doneTitle
+        self.onDone = onDone
     }
     
     var body: some View {
+        
         TextField(title, text: $text, axis: .vertical)
             .textFieldStyle(.roundedBorder)
             .lineLimit(minLineCount...maxLineCount)
@@ -49,6 +57,21 @@ struct LargeTextInputView: View {
             .textInputAutocapitalization(/*@START_MENU_TOKEN@*/.never/*@END_MENU_TOKEN@*/)
             .disableAutocorrection(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
             .padding(.horizontal, 36.0)
+            .done(doneTitle) {
+                onDone()
+            }
+    }
+}
+
+extension View {
+    func done(_ title: String = "Done", onDone: @escaping () -> Void) -> some View {
+        self
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button(title, action: onDone)
+                }
+        }
     }
 }
 
@@ -82,9 +105,23 @@ struct SecureInputView: View {
                 isSecured.toggle()
             }) {
                 Image(systemName: self.isSecured ? "eye.slash" : "eye")
-                    .accentColor(YarnboardPalette.textSecondary.color)
+                    .tint(NMPalette.textSecondary.color)
             }
         }
         .padding(.horizontal, 36.0)
+    }
+}
+
+class Input {
+    var text = ""
+}
+
+struct LargeTextInputView_Previews: PreviewProvider {
+    @State static var input = Input()
+    
+    static var previews: some View {
+        LargeTextInputView("Placeholder...", text: $input.text, minLineCount: 2) {
+                print("Submitovano!")
+            }
     }
 }

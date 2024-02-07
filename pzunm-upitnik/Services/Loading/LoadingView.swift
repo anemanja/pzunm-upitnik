@@ -7,17 +7,20 @@
 
 import SwiftUI
 
-struct LoadingView<Source: LoadingObject, LoaderView: View, ErrorView: View, ContentView: View>: View {
+struct LoadingView<Source: LoadingObject, InitialView: View, LoaderView: View, ErrorView: View, ContentView: View>: View {
     @ObservedObject var source: Source
+    var initial: () -> InitialView
     var loader: (CGFloat) -> LoaderView
-    var error: (Error, () -> Void) -> ErrorView
+    var error: (GenericError) -> ErrorView
     var content: (Source.Output) -> ContentView
     
     init(source: Source,
+         @ViewBuilder initial: @escaping () -> InitialView,
          @ViewBuilder loader: @escaping (CGFloat) -> LoaderView,
-         @ViewBuilder error: @escaping (Error, () -> Void) -> ErrorView,
+         @ViewBuilder error: @escaping (GenericError) -> ErrorView,
          @ViewBuilder content: @escaping (Source.Output) -> ContentView) {
         self.source = source
+        self.initial = initial
         self.loader = loader
         self.error = error
         self.content = content
@@ -26,11 +29,11 @@ struct LoadingView<Source: LoadingObject, LoaderView: View, ErrorView: View, Con
     var body: some View {
         switch source.state {
         case .idle:
-            Color.clear.onAppear(perform: source.load)
+            self.initial()
         case .loading(let progress):
             self.loader(progress)
         case .failed(let error):
-            self.error(error, source.load)
+            self.error(error)
         case .loaded(let output):
             self.content(output)
         }

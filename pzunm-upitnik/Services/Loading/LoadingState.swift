@@ -10,6 +10,6 @@ import Foundation
 enum LoadingState<Value> {
     case idle
     case loading(CGFloat)
-    case failed(Error)
+    case failed(GenericError)
     case loaded(Value)
 }

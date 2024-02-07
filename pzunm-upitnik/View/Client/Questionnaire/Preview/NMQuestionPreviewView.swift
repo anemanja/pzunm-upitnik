@@ -16,10 +16,10 @@ struct NMQuestionPreviewView: View {
                 HStack(alignment: .bottom) {
                     Text(question.formulation)
                     Spacer()
-                        .frame(width: 73.1)
-                    Text(question.answer ? "DA" : "NE")
+                    Text(question.answer.text)
+                        .padding(.leading)
                 }
-                if question.answer {
+                if question.answer == .yes {
                     Text(question.explanation)
                         .padding(.horizontal)
                         .frame(minHeight: 1.3)
@@ -34,8 +34,8 @@ struct NMQuestionPreviewView: View {
 struct NMQuestionPreviewView_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            NMQuestionPreviewView(question: NMQuestion(formulation: "Da li ste nekada bili skloni neprilagodjenom ponašanju (dolazili u sukob sa zakonom ili ispoljili izrazitu socijalnu i emocionalnu nestabilnost)?", answer: true, explanation: "Narusavanje javnog reda i mira. Narusavanje javnog reda i mira. Narusavanje javnog reda i mira. Narusavanje javnog reda i mira."))
-            NMQuestionPreviewView(question: NMQuestion(formulation: "Da li ste nekada bili skloni neprilagodjenom ponašanju (dolazili u sukob sa zakonom ili ispoljili izrazitu socijalnu i emocionalnu nestabilnost)?", answer: false, explanation: "Urinirao na vratima javne ustanove."))
+            NMQuestionPreviewView(question: NMQuestion(formulation: "Da li ste nekada bili skloni neprilagodjenom ponašanju (dolazili u sukob sa zakonom ili ispoljili izrazitu socijalnu i emocionalnu nestabilnost)?", answer: .yes, explanation: "Narusavanje javnog reda i mira. Narusavanje javnog reda i mira. Narusavanje javnog reda i mira. Narusavanje javnog reda i mira."))
+            NMQuestionPreviewView(question: NMQuestion(formulation: "Da li ste nekada bili skloni neprilagodjenom ponašanju (dolazili u sukob sa zakonom ili ispoljili izrazitu socijalnu i emocionalnu nestabilnost)?", answer: .no, explanation: "Urinirao na vratima javne ustanove."))
                 .listRowSeparatorTint(.black)
         }
         .listStyle(.plain)

@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol NMClientsService {
-    func getClients(for user: NMUser?) async -> Result<[NMClient], GenericError>
+    func getClients(includingCompleted shouldIncludeCompleted: Bool) async -> Result<[NMClient], GenericError>
 }
 
 public protocol NMClientsRepository {
@@ -22,11 +22,11 @@ public final class NMClientsServiceImplementation: NMClientsService {
         self.repository = repository
     }
     
-    public func getClients(for user: NMUser?) async -> Result<[NMClient], GenericError> {
+    public func getClients(includingCompleted shouldIncludeCompleted: Bool = false) async -> Result<[NMClient], GenericError> {
         let result = await repository.getClients()
         switch result {
         case .success(let clients):
-            if user != nil {
+            if !shouldIncludeCompleted {
                 return .success(clients.filter{ !$0.hasCompletedQuestionnaire })
             } else {
                 return .success(clients)

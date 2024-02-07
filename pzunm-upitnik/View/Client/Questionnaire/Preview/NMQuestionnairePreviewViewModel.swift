@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct NMQuestionnairePreview {
+    let clientId: String
+    let questionnaire: NMQuestionnaire
+    let signatureView: Image
+}
