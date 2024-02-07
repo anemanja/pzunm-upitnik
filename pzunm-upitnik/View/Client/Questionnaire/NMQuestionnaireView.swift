@@ -67,6 +67,7 @@ struct NMQuestionnaireView: View {
                                     .foregroundColor(NMPalette.foreground.color)
                                 CanvasView(canvasView: $canvasView, onSaved: onSaved, onBegan: onBegan, onEnded: onEnded)
                                     .border(Color(NMPalette.light.rawValue))
+                                Text(client.name + " " + client.surname)
                             }
                             .padding()
                         }
@@ -88,10 +89,9 @@ struct NMQuestionnaireView: View {
                     .padding()
                     .frame(width: gp.size.width)
                 }
-                .frame(height: 500.0)
-                .fixedSize(horizontal: true, vertical: false)
                 .offset(x: -gp.size.width * offsetIteration)
             }
+            .frame(height: 460.0)
             
             HStack {
                 ForEach(viewModel.currentQuestionIndicators.indices, id: \.hashValue) { index in
@@ -106,7 +106,7 @@ struct NMQuestionnaireView: View {
                                backgroundColor: NMPalette.background.color) {}
                 }
             }
-            .frame(maxHeight: 30.0)
+            .frame(height: 30.0)
             
             Spacer()
         }

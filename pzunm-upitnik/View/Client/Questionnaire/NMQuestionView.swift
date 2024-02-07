@@ -77,7 +77,9 @@ struct NMQuestionView: View {
                 
                 if isYesSelected {
                     LargeTextInputView(explanationPlaceholderText, text: $explanation, minLineCount: 3) {
-                        onAllowedToContinue()
+                        if !explanation.isEmpty {
+                            onAllowedToContinue()
+                        }
                     }
                         .font(.title2)
                         .foregroundColor(.blue)

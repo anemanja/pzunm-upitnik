@@ -57,6 +57,7 @@ struct LargeTextInputView: View {
             .textInputAutocapitalization(/*@START_MENU_TOKEN@*/.never/*@END_MENU_TOKEN@*/)
             .disableAutocorrection(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
             .padding(.horizontal, 36.0)
+            .ignoresSafeArea(.keyboard, edges: .bottom)
             .done(doneTitle) {
                 onDone()
             }
