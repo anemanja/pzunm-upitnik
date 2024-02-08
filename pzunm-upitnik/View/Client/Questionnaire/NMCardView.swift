@@ -18,8 +18,11 @@ struct NMCardView<Content: View>: View {
         ZStack {
             RoundedRectangle(cornerSize: CGSize(width: 25.0, height: 25.0))
                 .stroke(NMPalette.foreground.color, lineWidth: 0.5)
-                .background(RoundedRectangle(cornerSize: CGSize(width: 25.0, height: 25.0)).fill(Color(NMPalette.background.rawValue)))
-                .shadow(color: NMPalette.foreground.color, radius: 2.0, y: 3.0)
+                .background{
+                    RoundedRectangle(cornerSize: CGSize(width: 25.0, height: 25.0))
+                        .fill(Color(NMPalette.background.rawValue))
+                        .shadow(color: NMPalette.foreground.color, radius: 2.0, y: 3.0)
+                }
             
             content()
         }

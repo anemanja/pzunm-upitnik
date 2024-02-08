@@ -41,9 +41,9 @@ struct NMQuestionnaireView: View {
                         }
                         
                         Button("Potvrdi") {
-                            withAnimation(.easeOut) {
-                                offsetIteration = 1.0
-                            }
+//                            withAnimation(.easeOut) {
+                                nextQuestion()
+//                            }
                         }
                         .buttonStyle(.borderedProminent)
                     }
@@ -60,7 +60,7 @@ struct NMQuestionnaireView: View {
                         .frame(width: gp.size.width)
                     }
                     
-                    ZStack {
+                    ZStack (alignment: .top) {
                         NMCardView {
                             VStack{
                                 NMSectionHeaderView(text: "Svojeručni potpis")
@@ -68,11 +68,14 @@ struct NMQuestionnaireView: View {
                                 CanvasView(canvasView: $canvasView, onSaved: onSaved, onBegan: onBegan, onEnded: onEnded)
                                     .border(Color(NMPalette.light.rawValue))
                                 Text(client.name + " " + client.surname)
+                                    .font(.title2)
+                                    .padding()
                             }
                             .padding()
                         }
                         .padding(.bottom, 50.0)
-                        
+                        .frame(maxHeight: 300.0)
+
                         VStack {
                             Spacer()
                             

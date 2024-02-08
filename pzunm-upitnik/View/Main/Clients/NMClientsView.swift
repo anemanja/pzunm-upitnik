@@ -34,6 +34,7 @@ struct NMClientsView: View {
             List (clients) { client in
                 NMClientListItemView(client: client,
                                      shouldShowAll: shouldShowAll)
+                .contentShape(Rectangle())
                 .onTapGesture {
                     coordinatorViewModel.present(with: client)
                 }

@@ -28,9 +28,13 @@ struct NMMainView: View {
                 Text("UPITNIK O ZDRAVSTVENOM STANJU")
                     .dynamicTypeSize(.xxxLarge)
                 Spacer()
-                NMClientsView(shouldShowAll: $isAuthenticated)
+                NMCardView {
+                    NMClientsView(shouldShowAll: $isAuthenticated)
+                }
+                .padding()
                 Spacer()
             }
+            .background(Color(NMPalette.light.rawValue))
         }
     }
 }

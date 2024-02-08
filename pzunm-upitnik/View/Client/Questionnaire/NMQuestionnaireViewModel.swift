@@ -30,7 +30,6 @@ class NMQuestionnaireViewModel: ObservableObject {
                 case .success(let questionnaire):
                     self.questionnaire = questionnaire
                     self.currentQuestionIndicators = questionnaire.questions.map { _ in true }
-                    self.currentQuestionIndicators[0] = false
                 case .failure(_):
                     self.questionnaire = NMQuestionnaire.defaultValue
                 }
@@ -39,12 +38,22 @@ class NMQuestionnaireViewModel: ObservableObject {
     }
     
     func cycleToNextQuestion() {
-        guard let current = currentQuestionIndicators.firstIndex(of: false) else { return }
-        if current < currentQuestionIndicators.endIndex - 1 {
-            currentQuestionIndicators[current] = true
-            currentQuestionIndicators[current + 1] = false
-            currentQuestion = current + 1
+        let current = currentQuestionIndicators.firstIndex(of: false) ?? -1
+        setCurrent(to: current)
+    }
+    
+    func setCurrent(to index: Int) {
+        if index >= 0 {
+            currentQuestionIndicators[index] = true
         }
+        
+        if index + 1 < currentQuestionIndicators.endIndex {
+            currentQuestionIndicators[index + 1] = false
+        }
+        
+        currentQuestion = index + 1
+        
+        print("o=C=====>\t\(index)")
     }
     
     func confirmCurrent(explanation: String) {
