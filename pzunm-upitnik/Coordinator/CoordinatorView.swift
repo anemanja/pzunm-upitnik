@@ -12,18 +12,18 @@ struct CoordinatorView: View {
     
     var body: some View {
         NavigationStack(path: $viewModel.path) {
-            NMMainView()
-                .navigationDestination(for: NMClient.self) { client in
-                    if client.language == nil {
-                        NMLanguagesView(client: client)
+            MainView()
+                .navigationDestination(for: NMCertificate.self) { certificate in
+                    if certificate.language == nil {
+                        LanguagesView(certificate: certificate)
                     } else {
-                        NMQuestionnaireView(client: client)
+                        QuestionnaireView(certificate: certificate)
                     }
                 }
         }
         .fullScreenCover(isPresented: $viewModel.shouldCover) {
             if let coverData = viewModel.questionnairePreviewCoverData {
-                NMQuestionnairePreviewView(questionnairePreview: coverData)
+                QuestionnairePreviewView(questionnairePreview: coverData)
                     .interactiveDismissDisabled()
             } else {
                 Text("Invalid view data.")

@@ -8,15 +8,19 @@
 import Foundation
 
 public class ServiceModule {
-    public let authentication: any NMAuthenticationService
-    public let clients: any NMClientsService
-    public let questions: any NMQuestionsService
-    public let pdf: any NMPDFService
+    public let authentication: any AuthenticationServiceProtocol
+    public let certificates: any CertificatesServiceProtocol
+    public let pdf: any PDFServiceProtocol
+    public let localization: any LocalizationServiceProtocol
     
-    init(authentication: NMAuthenticationService, clients: NMClientsService, questions: NMQuestionsService, pdf: NMPDFService) {
+    init(authentication: any AuthenticationServiceProtocol,
+         certificates: any CertificatesServiceProtocol,
+         pdf: any PDFServiceProtocol,
+         localization: any LocalizationServiceProtocol
+    ) {
         self.authentication = authentication
-        self.clients = clients
-        self.questions = questions
+        self.certificates = certificates
         self.pdf = pdf
+        self.localization = localization
     }
 }

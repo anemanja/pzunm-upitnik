@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		EF2C7E842B62A74A006B94A6 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C7E832B62A74A006B94A6 /* CanvasView.swift */; };
 		EF2C7E872B62BDC9006B94A6 /* CanvasCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C7E862B62BDC9006B94A6 /* CanvasCoordinator.swift */; };
-		EF2C7E8C2B62D015006B94A6 /* NMQuestionnairePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C7E8B2B62D015006B94A6 /* NMQuestionnairePreviewViewModel.swift */; };
-		EF2C7E8E2B62D0E1006B94A6 /* NMQuestionnairePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C7E8D2B62D0E1006B94A6 /* NMQuestionnairePreviewView.swift */; };
-		EF2C7E902B62D936006B94A6 /* NMQuestionPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C7E8F2B62D936006B94A6 /* NMQuestionPreviewView.swift */; };
-		EF51A26E2B73CCB100537099 /* NMCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51A26D2B73CCB100537099 /* NMCardView.swift */; };
+		EF2C7E8C2B62D015006B94A6 /* NMQuestionnairePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C7E8B2B62D015006B94A6 /* NMQuestionnairePreview.swift */; };
+		EF2C7E8E2B62D0E1006B94A6 /* QuestionnairePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C7E8D2B62D0E1006B94A6 /* QuestionnairePreviewView.swift */; };
+		EF2C7E902B62D936006B94A6 /* QuestionPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C7E8F2B62D936006B94A6 /* QuestionPreviewView.swift */; };
+		EF51A26E2B73CCB100537099 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51A26D2B73CCB100537099 /* CardView.swift */; };
 		EF51D6132AF0FA7C0081CD36 /* pzunm_upitnikApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51D6122AF0FA7C0081CD36 /* pzunm_upitnikApp.swift */; };
 		EF51D6172AF0FA7F0081CD36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF51D6162AF0FA7F0081CD36 /* Assets.xcassets */; };
 		EF51D61A2AF0FA7F0081CD36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF51D6192AF0FA7F0081CD36 /* Preview Assets.xcassets */; };
@@ -21,40 +21,46 @@
 		EF51D6312AF0FA7F0081CD36 /* pzunm_upitnikUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51D6302AF0FA7F0081CD36 /* pzunm_upitnikUITestsLaunchTests.swift */; };
 		EF51D63F2AF0FBDE0081CD36 /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF51D63E2AF0FBDE0081CD36 /* PDFKit.framework */; };
 		EF51D6412AF0FC0D0081CD36 /* PencilKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF51D6402AF0FC0D0081CD36 /* PencilKit.framework */; };
-		EF6491802B6A4EE600657F2D /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF64917F2B6A4EE600657F2D /* Preview.swift */; };
-		EF8DA5962B5F296600738D84 /* NMClientListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8DA5952B5F296600738D84 /* NMClientListItemView.swift */; };
-		EFB1E19F2B6D7D24008C1B77 /* NMSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB1E19E2B6D7D24008C1B77 /* NMSectionHeaderView.swift */; };
+		EF8DA5962B5F296600738D84 /* CertificateListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8DA5952B5F296600738D84 /* CertificateListItemView.swift */; };
+		EF9EB7402B77AEB800961BDD /* NMLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EB73F2B77AEB800961BDD /* NMLocalization.swift */; };
+		EF9EB7442B7833C500961BDD /* CertificatesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EB7432B7833C500961BDD /* CertificatesRepository.swift */; };
+		EF9EB74C2B7C2D8B00961BDD /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EB74B2B7C2D8B00961BDD /* APIConfiguration.swift */; };
+		EF9EB74E2B7C2DD300961BDD /* Endpoint+NM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EB74D2B7C2DD300961BDD /* Endpoint+NM.swift */; };
+		EF9EB7502B7C2F5B00961BDD /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = EF9EB74F2B7C2F5B00961BDD /* Networking */; };
+		EF9EB7522B7C300E00961BDD /* NMRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EB7512B7C300E00961BDD /* NMRequestBuilder.swift */; };
+		EF9EB7542B7D7DEE00961BDD /* LocalizationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EB7532B7D7DEE00961BDD /* LocalizationRepository.swift */; };
+		EFB1E19F2B6D7D24008C1B77 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB1E19E2B6D7D24008C1B77 /* SectionHeaderView.swift */; };
 		EFB1E1A12B6D9689008C1B77 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB1E1A02B6D9689008C1B77 /* ToggleView.swift */; };
 		EFC9335F2B6953A300DB3BB1 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9335E2B6953A300DB3BB1 /* LoadingState.swift */; };
 		EFC933612B6953E600DB3BB1 /* LoadingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC933602B6953E600DB3BB1 /* LoadingObject.swift */; };
 		EFC933642B69555A00DB3BB1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC933632B69555A00DB3BB1 /* LoadingView.swift */; };
-		EFC933662B69822700DB3BB1 /* NMClientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC933652B69822700DB3BB1 /* NMClientsViewModel.swift */; };
-		EFC933682B69823D00DB3BB1 /* NMAuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC933672B69823D00DB3BB1 /* NMAuthenticationView.swift */; };
-		EFDFC1D62B6A711800FE44B9 /* NMPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDFC1D52B6A711800FE44B9 /* NMPalette.swift */; };
+		EFC933662B69822700DB3BB1 /* CertificatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC933652B69822700DB3BB1 /* CertificatesViewModel.swift */; };
+		EFC933682B69823D00DB3BB1 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC933672B69823D00DB3BB1 /* AuthenticationView.swift */; };
+		EFDFC1D62B6A711800FE44B9 /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDFC1D52B6A711800FE44B9 /* Color+Custom.swift */; };
 		EFE1D54F2B5819AC008AAEDD /* NMQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D54E2B5819AC008AAEDD /* NMQuestion.swift */; };
-		EFE1D5512B581A83008AAEDD /* LocalizationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5502B581A83008AAEDD /* LocalizationKeys.swift */; };
-		EFE1D5532B5821B5008AAEDD /* NMQuestionnaireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5522B5821B5008AAEDD /* NMQuestionnaireViewModel.swift */; };
-		EFE1D5552B588546008AAEDD /* NMQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5542B588545008AAEDD /* NMQuestionView.swift */; };
-		EFE1D5572B59A56C008AAEDD /* NMQuestionnaireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5562B59A56C008AAEDD /* NMQuestionnaireView.swift */; };
-		EFE1D55B2B59B214008AAEDD /* NMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D55A2B59B214008AAEDD /* NMClient.swift */; };
-		EFE1D55D2B5A9EDF008AAEDD /* NMLanguagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D55C2B5A9EDF008AAEDD /* NMLanguagesView.swift */; };
-		EFE1D55F2B5A9EEC008AAEDD /* NMMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D55E2B5A9EEC008AAEDD /* NMMainView.swift */; };
-		EFE1D56A2B5AA00D008AAEDD /* NMAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5692B5AA00D008AAEDD /* NMAuthenticationService.swift */; };
-		EFE1D56C2B5AA021008AAEDD /* NMClientsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D56B2B5AA021008AAEDD /* NMClientsService.swift */; };
-		EFE1D56E2B5AA047008AAEDD /* NMQuestionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D56D2B5AA047008AAEDD /* NMQuestionsService.swift */; };
-		EFE1D5702B5AA09A008AAEDD /* NMPDFService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D56F2B5AA09A008AAEDD /* NMPDFService.swift */; };
+		EFE1D5512B581A83008AAEDD /* LocalizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5502B581A83008AAEDD /* LocalizationService.swift */; };
+		EFE1D5532B5821B5008AAEDD /* QuestionnaireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5522B5821B5008AAEDD /* QuestionnaireViewModel.swift */; };
+		EFE1D5552B588546008AAEDD /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5542B588545008AAEDD /* QuestionView.swift */; };
+		EFE1D5572B59A56C008AAEDD /* QuestionnaireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5562B59A56C008AAEDD /* QuestionnaireView.swift */; };
+		EFE1D55B2B59B214008AAEDD /* NMCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D55A2B59B214008AAEDD /* NMCertificate.swift */; };
+		EFE1D55D2B5A9EDF008AAEDD /* LanguagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D55C2B5A9EDF008AAEDD /* LanguagesView.swift */; };
+		EFE1D55F2B5A9EEC008AAEDD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D55E2B5A9EEC008AAEDD /* MainView.swift */; };
+		EFE1D56A2B5AA00D008AAEDD /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5692B5AA00D008AAEDD /* AuthenticationService.swift */; };
+		EFE1D56C2B5AA021008AAEDD /* CertificatesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D56B2B5AA021008AAEDD /* CertificatesService.swift */; };
+		EFE1D56E2B5AA047008AAEDD /* QuestionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D56D2B5AA047008AAEDD /* QuestionsService.swift */; };
+		EFE1D5702B5AA09A008AAEDD /* PDFService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D56F2B5AA09A008AAEDD /* PDFService.swift */; };
 		EFE1D5722B5AA0B8008AAEDD /* NMLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5712B5AA0B8008AAEDD /* NMLanguage.swift */; };
 		EFE1D5742B5AA279008AAEDD /* NMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5732B5AA279008AAEDD /* NMUser.swift */; };
 		EFE1D5772B5AA39A008AAEDD /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5752B5AA399008AAEDD /* GenericError.swift */; };
 		EFE1D5782B5AA39A008AAEDD /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5762B5AA399008AAEDD /* Logger.swift */; };
 		EFE1D57B2B5AA4C4008AAEDD /* MockRepositoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D57A2B5AA4C4008AAEDD /* MockRepositoryModule.swift */; };
 		EFE1D57D2B5AAF5A008AAEDD /* ServiceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D57C2B5AAF5A008AAEDD /* ServiceModule.swift */; };
-		EFE1D57F2B5AB774008AAEDD /* NMAuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D57E2B5AB774008AAEDD /* NMAuthenticationViewModel.swift */; };
+		EFE1D57F2B5AB774008AAEDD /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D57E2B5AB774008AAEDD /* AuthenticationViewModel.swift */; };
 		EFE1D5822B5B1831008AAEDD /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5812B5B1831008AAEDD /* CoordinatorView.swift */; };
 		EFE1D5852B5B25F6008AAEDD /* CoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5842B5B25F6008AAEDD /* CoordinatorViewModel.swift */; };
-		EFEB776A2B69A2C4004FA9A8 /* NMClientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEB77692B69A2C4004FA9A8 /* NMClientsView.swift */; };
+		EFEB776A2B69A2C4004FA9A8 /* CertificatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEB77692B69A2C4004FA9A8 /* CertificatesView.swift */; };
 		EFEB776C2B69A3AF004FA9A8 /* TextInputViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEB776B2B69A3AF004FA9A8 /* TextInputViews.swift */; };
-		EFFB1D1A2B6C467500E25C89 /* NMQuestionnaireButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB1D192B6C467500E25C89 /* NMQuestionnaireButton.swift */; };
+		EFFB1D1A2B6C467500E25C89 /* QuestionnaireButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB1D192B6C467500E25C89 /* QuestionnaireButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,10 +83,10 @@
 /* Begin PBXFileReference section */
 		EF2C7E832B62A74A006B94A6 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		EF2C7E862B62BDC9006B94A6 /* CanvasCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasCoordinator.swift; sourceTree = "<group>"; };
-		EF2C7E8B2B62D015006B94A6 /* NMQuestionnairePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMQuestionnairePreviewViewModel.swift; sourceTree = "<group>"; };
-		EF2C7E8D2B62D0E1006B94A6 /* NMQuestionnairePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMQuestionnairePreviewView.swift; sourceTree = "<group>"; };
-		EF2C7E8F2B62D936006B94A6 /* NMQuestionPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMQuestionPreviewView.swift; sourceTree = "<group>"; };
-		EF51A26D2B73CCB100537099 /* NMCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMCardView.swift; sourceTree = "<group>"; };
+		EF2C7E8B2B62D015006B94A6 /* NMQuestionnairePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMQuestionnairePreview.swift; sourceTree = "<group>"; };
+		EF2C7E8D2B62D0E1006B94A6 /* QuestionnairePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnairePreviewView.swift; sourceTree = "<group>"; };
+		EF2C7E8F2B62D936006B94A6 /* QuestionPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPreviewView.swift; sourceTree = "<group>"; };
+		EF51A26D2B73CCB100537099 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		EF51D60F2AF0FA7C0081CD36 /* pzunm-upitnik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pzunm-upitnik.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF51D6122AF0FA7C0081CD36 /* pzunm_upitnikApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pzunm_upitnikApp.swift; sourceTree = "<group>"; };
 		EF51D6162AF0FA7F0081CD36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,41 +99,47 @@
 		EF51D6302AF0FA7F0081CD36 /* pzunm_upitnikUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pzunm_upitnikUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EF51D63E2AF0FBDE0081CD36 /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/PDFKit.framework; sourceTree = DEVELOPER_DIR; };
 		EF51D6402AF0FC0D0081CD36 /* PencilKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PencilKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/PencilKit.framework; sourceTree = DEVELOPER_DIR; };
-		EF64917F2B6A4EE600657F2D /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
-		EF8DA5952B5F296600738D84 /* NMClientListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMClientListItemView.swift; sourceTree = "<group>"; };
-		EFB1E19E2B6D7D24008C1B77 /* NMSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMSectionHeaderView.swift; sourceTree = "<group>"; };
+		EF8DA5952B5F296600738D84 /* CertificateListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateListItemView.swift; sourceTree = "<group>"; };
+		EF9EB73F2B77AEB800961BDD /* NMLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMLocalization.swift; sourceTree = "<group>"; };
+		EF9EB7432B7833C500961BDD /* CertificatesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatesRepository.swift; sourceTree = "<group>"; };
+		EF9EB7472B7C145B00961BDD /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Networking; path = ../Networking/Networking; sourceTree = "<group>"; };
+		EF9EB74B2B7C2D8B00961BDD /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
+		EF9EB74D2B7C2DD300961BDD /* Endpoint+NM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+NM.swift"; sourceTree = "<group>"; };
+		EF9EB7512B7C300E00961BDD /* NMRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMRequestBuilder.swift; sourceTree = "<group>"; };
+		EF9EB7532B7D7DEE00961BDD /* LocalizationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationRepository.swift; sourceTree = "<group>"; };
+		EFB1E19E2B6D7D24008C1B77 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		EFB1E1A02B6D9689008C1B77 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
 		EFC9335E2B6953A300DB3BB1 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		EFC933602B6953E600DB3BB1 /* LoadingObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingObject.swift; sourceTree = "<group>"; };
 		EFC933632B69555A00DB3BB1 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		EFC933652B69822700DB3BB1 /* NMClientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMClientsViewModel.swift; sourceTree = "<group>"; };
-		EFC933672B69823D00DB3BB1 /* NMAuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMAuthenticationView.swift; sourceTree = "<group>"; };
-		EFDFC1D52B6A711800FE44B9 /* NMPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMPalette.swift; sourceTree = "<group>"; };
+		EFC933652B69822700DB3BB1 /* CertificatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatesViewModel.swift; sourceTree = "<group>"; };
+		EFC933672B69823D00DB3BB1 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		EFDFC1D52B6A711800FE44B9 /* Color+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Custom.swift"; sourceTree = "<group>"; };
 		EFE1D54E2B5819AC008AAEDD /* NMQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMQuestion.swift; sourceTree = "<group>"; };
-		EFE1D5502B581A83008AAEDD /* LocalizationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationKeys.swift; sourceTree = "<group>"; };
-		EFE1D5522B5821B5008AAEDD /* NMQuestionnaireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMQuestionnaireViewModel.swift; sourceTree = "<group>"; };
-		EFE1D5542B588545008AAEDD /* NMQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMQuestionView.swift; sourceTree = "<group>"; };
-		EFE1D5562B59A56C008AAEDD /* NMQuestionnaireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMQuestionnaireView.swift; sourceTree = "<group>"; };
-		EFE1D55A2B59B214008AAEDD /* NMClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMClient.swift; sourceTree = "<group>"; };
-		EFE1D55C2B5A9EDF008AAEDD /* NMLanguagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMLanguagesView.swift; sourceTree = "<group>"; };
-		EFE1D55E2B5A9EEC008AAEDD /* NMMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMMainView.swift; sourceTree = "<group>"; };
-		EFE1D5692B5AA00D008AAEDD /* NMAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMAuthenticationService.swift; sourceTree = "<group>"; };
-		EFE1D56B2B5AA021008AAEDD /* NMClientsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMClientsService.swift; sourceTree = "<group>"; };
-		EFE1D56D2B5AA047008AAEDD /* NMQuestionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMQuestionsService.swift; sourceTree = "<group>"; };
-		EFE1D56F2B5AA09A008AAEDD /* NMPDFService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMPDFService.swift; sourceTree = "<group>"; };
+		EFE1D5502B581A83008AAEDD /* LocalizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationService.swift; sourceTree = "<group>"; };
+		EFE1D5522B5821B5008AAEDD /* QuestionnaireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireViewModel.swift; sourceTree = "<group>"; };
+		EFE1D5542B588545008AAEDD /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		EFE1D5562B59A56C008AAEDD /* QuestionnaireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireView.swift; sourceTree = "<group>"; };
+		EFE1D55A2B59B214008AAEDD /* NMCertificate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMCertificate.swift; sourceTree = "<group>"; };
+		EFE1D55C2B5A9EDF008AAEDD /* LanguagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesView.swift; sourceTree = "<group>"; };
+		EFE1D55E2B5A9EEC008AAEDD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		EFE1D5692B5AA00D008AAEDD /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		EFE1D56B2B5AA021008AAEDD /* CertificatesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatesService.swift; sourceTree = "<group>"; };
+		EFE1D56D2B5AA047008AAEDD /* QuestionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsService.swift; sourceTree = "<group>"; };
+		EFE1D56F2B5AA09A008AAEDD /* PDFService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFService.swift; sourceTree = "<group>"; };
 		EFE1D5712B5AA0B8008AAEDD /* NMLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMLanguage.swift; sourceTree = "<group>"; };
 		EFE1D5732B5AA279008AAEDD /* NMUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMUser.swift; sourceTree = "<group>"; };
 		EFE1D5752B5AA399008AAEDD /* GenericError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
 		EFE1D5762B5AA399008AAEDD /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		EFE1D57A2B5AA4C4008AAEDD /* MockRepositoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryModule.swift; sourceTree = "<group>"; };
 		EFE1D57C2B5AAF5A008AAEDD /* ServiceModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModule.swift; sourceTree = "<group>"; };
-		EFE1D57E2B5AB774008AAEDD /* NMAuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMAuthenticationViewModel.swift; sourceTree = "<group>"; };
+		EFE1D57E2B5AB774008AAEDD /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		EFE1D5812B5B1831008AAEDD /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		EFE1D5842B5B25F6008AAEDD /* CoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorViewModel.swift; sourceTree = "<group>"; };
 		EFE1D5862B5EAD96008AAEDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		EFEB77692B69A2C4004FA9A8 /* NMClientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMClientsView.swift; sourceTree = "<group>"; };
+		EFEB77692B69A2C4004FA9A8 /* CertificatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatesView.swift; sourceTree = "<group>"; };
 		EFEB776B2B69A3AF004FA9A8 /* TextInputViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputViews.swift; sourceTree = "<group>"; };
-		EFFB1D192B6C467500E25C89 /* NMQuestionnaireButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMQuestionnaireButton.swift; sourceTree = "<group>"; };
+		EFFB1D192B6C467500E25C89 /* QuestionnaireButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF9EB7502B7C2F5B00961BDD /* Networking in Frameworks */,
 				EF51D6412AF0FC0D0081CD36 /* PencilKit.framework in Frameworks */,
 				EF51D63F2AF0FBDE0081CD36 /* PDFKit.framework in Frameworks */,
 			);
@@ -169,9 +182,8 @@
 		EF2C7E8A2B62CFF2006B94A6 /* Preview */ = {
 			isa = PBXGroup;
 			children = (
-				EF2C7E8F2B62D936006B94A6 /* NMQuestionPreviewView.swift */,
-				EF2C7E8B2B62D015006B94A6 /* NMQuestionnairePreviewViewModel.swift */,
-				EF2C7E8D2B62D0E1006B94A6 /* NMQuestionnairePreviewView.swift */,
+				EF2C7E8F2B62D936006B94A6 /* QuestionPreviewView.swift */,
+				EF2C7E8D2B62D0E1006B94A6 /* QuestionnairePreviewView.swift */,
 			);
 			path = Preview;
 			sourceTree = "<group>";
@@ -179,6 +191,7 @@
 		EF51D6062AF0FA7C0081CD36 = {
 			isa = PBXGroup;
 			children = (
+				EF9EB7452B7C13F200961BDD /* Packages */,
 				EF51D6112AF0FA7C0081CD36 /* pzunm-upitnik */,
 				EF51D6232AF0FA7F0081CD36 /* pzunm-upitnikTests */,
 				EF51D62D2AF0FA7F0081CD36 /* pzunm-upitnikUITests */,
@@ -207,8 +220,8 @@
 				EFE1D5592B59B202008AAEDD /* View */,
 				EFE1D5832B5B25DC008AAEDD /* Coordinator */,
 				EF51D6122AF0FA7C0081CD36 /* pzunm_upitnikApp.swift */,
-				EFE1D5502B581A83008AAEDD /* LocalizationKeys.swift */,
-				EF64917F2B6A4EE600657F2D /* Preview.swift */,
+				EFDFC1D52B6A711800FE44B9 /* Color+Custom.swift */,
+				EFEB776B2B69A3AF004FA9A8 /* TextInputViews.swift */,
 				EF51D6162AF0FA7F0081CD36 /* Assets.xcassets */,
 				EF51D61B2AF0FA7F0081CD36 /* pzunm_upitnik.entitlements */,
 				EF51D6182AF0FA7F0081CD36 /* Preview Content */,
@@ -250,6 +263,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EF9EB7452B7C13F200961BDD /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				EF9EB7472B7C145B00961BDD /* Networking */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		EF9EB74A2B7C2D7000961BDD /* Networking+NM */ = {
+			isa = PBXGroup;
+			children = (
+				EF9EB74B2B7C2D8B00961BDD /* APIConfiguration.swift */,
+				EF9EB74D2B7C2DD300961BDD /* Endpoint+NM.swift */,
+				EF9EB7512B7C300E00961BDD /* NMRequestBuilder.swift */,
+			);
+			path = "Networking+NM";
+			sourceTree = "<group>";
+		};
+		EF9EB7552B7FCF5100961BDD /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D5542B588545008AAEDD /* QuestionView.swift */,
+				EF51A26D2B73CCB100537099 /* CardView.swift */,
+				EFB1E1A02B6D9689008C1B77 /* ToggleView.swift */,
+				EFFB1D192B6C467500E25C89 /* QuestionnaireButton.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
 		EFC933622B69540C00DB3BB1 /* Loading */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,7 +305,7 @@
 		EFE1D5582B59B1F8008AAEDD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EFE1D5672B5A9FE5008AAEDD /* Client */,
+				EFE1D5672B5A9FE5008AAEDD /* Certificate */,
 				EFE1D5732B5AA279008AAEDD /* NMUser.swift */,
 				EFE1D5752B5AA399008AAEDD /* GenericError.swift */,
 				EFE1D5762B5AA399008AAEDD /* Logger.swift */,
@@ -274,10 +316,8 @@
 		EFE1D5592B59B202008AAEDD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EFE1D5622B5A9F34008AAEDD /* Client */,
+				EFE1D5622B5A9F34008AAEDD /* Certificate */,
 				EFE1D5612B5A9F1F008AAEDD /* Main */,
-				EFEB776B2B69A3AF004FA9A8 /* TextInputViews.swift */,
-				EFDFC1D52B6A711800FE44B9 /* NMPalette.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -285,33 +325,30 @@
 		EFE1D5612B5A9F1F008AAEDD /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				EFE1D55E2B5A9EEC008AAEDD /* NMMainView.swift */,
+				EFE1D55E2B5A9EEC008AAEDD /* MainView.swift */,
 				EFEB776D2B69A3CB004FA9A8 /* Authentication */,
 				EFEB776E2B69A3E5004FA9A8 /* Clients */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		EFE1D5622B5A9F34008AAEDD /* Client */ = {
+		EFE1D5622B5A9F34008AAEDD /* Certificate */ = {
 			isa = PBXGroup;
 			children = (
 				EFE1D5632B5A9F3F008AAEDD /* Questionnaire */,
 				EFE1D5642B5A9F4D008AAEDD /* Languages */,
 			);
-			path = Client;
+			path = Certificate;
 			sourceTree = "<group>";
 		};
 		EFE1D5632B5A9F3F008AAEDD /* Questionnaire */ = {
 			isa = PBXGroup;
 			children = (
 				EF2C7E852B62A757006B94A6 /* Canvas */,
-				EFE1D5522B5821B5008AAEDD /* NMQuestionnaireViewModel.swift */,
-				EFE1D5562B59A56C008AAEDD /* NMQuestionnaireView.swift */,
-				EFE1D5542B588545008AAEDD /* NMQuestionView.swift */,
-				EF51A26D2B73CCB100537099 /* NMCardView.swift */,
-				EFB1E1A02B6D9689008C1B77 /* ToggleView.swift */,
-				EFFB1D192B6C467500E25C89 /* NMQuestionnaireButton.swift */,
-				EFB1E19E2B6D7D24008C1B77 /* NMSectionHeaderView.swift */,
+				EFE1D5522B5821B5008AAEDD /* QuestionnaireViewModel.swift */,
+				EFE1D5562B59A56C008AAEDD /* QuestionnaireView.swift */,
+				EF9EB7552B7FCF5100961BDD /* Question */,
+				EFB1E19E2B6D7D24008C1B77 /* SectionHeaderView.swift */,
 				EF2C7E8A2B62CFF2006B94A6 /* Preview */,
 			);
 			path = Questionnaire;
@@ -320,7 +357,7 @@
 		EFE1D5642B5A9F4D008AAEDD /* Languages */ = {
 			isa = PBXGroup;
 			children = (
-				EFE1D55C2B5A9EDF008AAEDD /* NMLanguagesView.swift */,
+				EFE1D55C2B5A9EDF008AAEDD /* LanguagesView.swift */,
 			);
 			path = Languages;
 			sourceTree = "<group>";
@@ -328,19 +365,21 @@
 		EFE1D5652B5A9FAB008AAEDD /* Questionnaire */ = {
 			isa = PBXGroup;
 			children = (
+				EF2C7E8B2B62D015006B94A6 /* NMQuestionnairePreview.swift */,
 				EFE1D54E2B5819AC008AAEDD /* NMQuestion.swift */,
 			);
 			path = Questionnaire;
 			sourceTree = "<group>";
 		};
-		EFE1D5672B5A9FE5008AAEDD /* Client */ = {
+		EFE1D5672B5A9FE5008AAEDD /* Certificate */ = {
 			isa = PBXGroup;
 			children = (
 				EFE1D5652B5A9FAB008AAEDD /* Questionnaire */,
-				EFE1D55A2B59B214008AAEDD /* NMClient.swift */,
+				EFE1D55A2B59B214008AAEDD /* NMCertificate.swift */,
 				EFE1D5712B5AA0B8008AAEDD /* NMLanguage.swift */,
+				EF9EB73F2B77AEB800961BDD /* NMLocalization.swift */,
 			);
-			path = Client;
+			path = Certificate;
 			sourceTree = "<group>";
 		};
 		EFE1D5682B5A9FF6008AAEDD /* Services */ = {
@@ -348,10 +387,11 @@
 			children = (
 				EFC933622B69540C00DB3BB1 /* Loading */,
 				EFE1D57C2B5AAF5A008AAEDD /* ServiceModule.swift */,
-				EFE1D5692B5AA00D008AAEDD /* NMAuthenticationService.swift */,
-				EFE1D56B2B5AA021008AAEDD /* NMClientsService.swift */,
-				EFE1D56D2B5AA047008AAEDD /* NMQuestionsService.swift */,
-				EFE1D56F2B5AA09A008AAEDD /* NMPDFService.swift */,
+				EFE1D5692B5AA00D008AAEDD /* AuthenticationService.swift */,
+				EFE1D56B2B5AA021008AAEDD /* CertificatesService.swift */,
+				EFE1D56D2B5AA047008AAEDD /* QuestionsService.swift */,
+				EFE1D5502B581A83008AAEDD /* LocalizationService.swift */,
+				EFE1D56F2B5AA09A008AAEDD /* PDFService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -359,7 +399,10 @@
 		EFE1D5792B5AA4AC008AAEDD /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				EF9EB74A2B7C2D7000961BDD /* Networking+NM */,
 				EFE1D57A2B5AA4C4008AAEDD /* MockRepositoryModule.swift */,
+				EF9EB7432B7833C500961BDD /* CertificatesRepository.swift */,
+				EF9EB7532B7D7DEE00961BDD /* LocalizationRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -376,8 +419,8 @@
 		EFEB776D2B69A3CB004FA9A8 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				EFE1D57E2B5AB774008AAEDD /* NMAuthenticationViewModel.swift */,
-				EFC933672B69823D00DB3BB1 /* NMAuthenticationView.swift */,
+				EFE1D57E2B5AB774008AAEDD /* AuthenticationViewModel.swift */,
+				EFC933672B69823D00DB3BB1 /* AuthenticationView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -385,9 +428,9 @@
 		EFEB776E2B69A3E5004FA9A8 /* Clients */ = {
 			isa = PBXGroup;
 			children = (
-				EFC933652B69822700DB3BB1 /* NMClientsViewModel.swift */,
-				EF8DA5952B5F296600738D84 /* NMClientListItemView.swift */,
-				EFEB77692B69A2C4004FA9A8 /* NMClientsView.swift */,
+				EFC933652B69822700DB3BB1 /* CertificatesViewModel.swift */,
+				EF8DA5952B5F296600738D84 /* CertificateListItemView.swift */,
+				EFEB77692B69A2C4004FA9A8 /* CertificatesView.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -408,6 +451,9 @@
 			dependencies = (
 			);
 			name = "pzunm-upitnik";
+			packageProductDependencies = (
+				EF9EB74F2B7C2F5B00961BDD /* Networking */,
+			);
 			productName = "pzunm-upitnik";
 			productReference = EF51D60F2AF0FA7C0081CD36 /* pzunm-upitnik.app */;
 			productType = "com.apple.product-type.application";
@@ -526,47 +572,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFE1D55D2B5A9EDF008AAEDD /* NMLanguagesView.swift in Sources */,
+				EFE1D55D2B5A9EDF008AAEDD /* LanguagesView.swift in Sources */,
 				EFE1D5742B5AA279008AAEDD /* NMUser.swift in Sources */,
+				EF9EB74E2B7C2DD300961BDD /* Endpoint+NM.swift in Sources */,
 				EF2C7E842B62A74A006B94A6 /* CanvasView.swift in Sources */,
 				EFC9335F2B6953A300DB3BB1 /* LoadingState.swift in Sources */,
 				EFE1D54F2B5819AC008AAEDD /* NMQuestion.swift in Sources */,
-				EFE1D56E2B5AA047008AAEDD /* NMQuestionsService.swift in Sources */,
-				EFE1D55B2B59B214008AAEDD /* NMClient.swift in Sources */,
+				EFE1D56E2B5AA047008AAEDD /* QuestionsService.swift in Sources */,
+				EFE1D55B2B59B214008AAEDD /* NMCertificate.swift in Sources */,
+				EF9EB74C2B7C2D8B00961BDD /* APIConfiguration.swift in Sources */,
 				EFE1D5722B5AA0B8008AAEDD /* NMLanguage.swift in Sources */,
-				EFE1D56A2B5AA00D008AAEDD /* NMAuthenticationService.swift in Sources */,
-				EF8DA5962B5F296600738D84 /* NMClientListItemView.swift in Sources */,
+				EFE1D56A2B5AA00D008AAEDD /* AuthenticationService.swift in Sources */,
+				EF8DA5962B5F296600738D84 /* CertificateListItemView.swift in Sources */,
 				EFE1D5772B5AA39A008AAEDD /* GenericError.swift in Sources */,
-				EFE1D5512B581A83008AAEDD /* LocalizationKeys.swift in Sources */,
-				EFB1E19F2B6D7D24008C1B77 /* NMSectionHeaderView.swift in Sources */,
-				EFC933662B69822700DB3BB1 /* NMClientsViewModel.swift in Sources */,
+				EFE1D5512B581A83008AAEDD /* LocalizationService.swift in Sources */,
+				EFB1E19F2B6D7D24008C1B77 /* SectionHeaderView.swift in Sources */,
+				EFC933662B69822700DB3BB1 /* CertificatesViewModel.swift in Sources */,
 				EFE1D57D2B5AAF5A008AAEDD /* ServiceModule.swift in Sources */,
-				EFE1D57F2B5AB774008AAEDD /* NMAuthenticationViewModel.swift in Sources */,
-				EFC933682B69823D00DB3BB1 /* NMAuthenticationView.swift in Sources */,
+				EFE1D57F2B5AB774008AAEDD /* AuthenticationViewModel.swift in Sources */,
+				EFC933682B69823D00DB3BB1 /* AuthenticationView.swift in Sources */,
 				EFC933612B6953E600DB3BB1 /* LoadingObject.swift in Sources */,
-				EF51A26E2B73CCB100537099 /* NMCardView.swift in Sources */,
-				EFEB776A2B69A2C4004FA9A8 /* NMClientsView.swift in Sources */,
+				EF51A26E2B73CCB100537099 /* CardView.swift in Sources */,
+				EFEB776A2B69A2C4004FA9A8 /* CertificatesView.swift in Sources */,
+				EF9EB7442B7833C500961BDD /* CertificatesRepository.swift in Sources */,
 				EFE1D57B2B5AA4C4008AAEDD /* MockRepositoryModule.swift in Sources */,
-				EF2C7E902B62D936006B94A6 /* NMQuestionPreviewView.swift in Sources */,
+				EF2C7E902B62D936006B94A6 /* QuestionPreviewView.swift in Sources */,
 				EF51D6132AF0FA7C0081CD36 /* pzunm_upitnikApp.swift in Sources */,
-				EFE1D55F2B5A9EEC008AAEDD /* NMMainView.swift in Sources */,
-				EFFB1D1A2B6C467500E25C89 /* NMQuestionnaireButton.swift in Sources */,
-				EF2C7E8C2B62D015006B94A6 /* NMQuestionnairePreviewViewModel.swift in Sources */,
-				EFE1D5572B59A56C008AAEDD /* NMQuestionnaireView.swift in Sources */,
+				EFE1D55F2B5A9EEC008AAEDD /* MainView.swift in Sources */,
+				EFFB1D1A2B6C467500E25C89 /* QuestionnaireButton.swift in Sources */,
+				EF2C7E8C2B62D015006B94A6 /* NMQuestionnairePreview.swift in Sources */,
+				EFE1D5572B59A56C008AAEDD /* QuestionnaireView.swift in Sources */,
+				EF9EB7542B7D7DEE00961BDD /* LocalizationRepository.swift in Sources */,
+				EF9EB7522B7C300E00961BDD /* NMRequestBuilder.swift in Sources */,
 				EFB1E1A12B6D9689008C1B77 /* ToggleView.swift in Sources */,
 				EFEB776C2B69A3AF004FA9A8 /* TextInputViews.swift in Sources */,
 				EFE1D5782B5AA39A008AAEDD /* Logger.swift in Sources */,
-				EFE1D5702B5AA09A008AAEDD /* NMPDFService.swift in Sources */,
-				EF2C7E8E2B62D0E1006B94A6 /* NMQuestionnairePreviewView.swift in Sources */,
-				EFE1D5532B5821B5008AAEDD /* NMQuestionnaireViewModel.swift in Sources */,
+				EFE1D5702B5AA09A008AAEDD /* PDFService.swift in Sources */,
+				EF2C7E8E2B62D0E1006B94A6 /* QuestionnairePreviewView.swift in Sources */,
+				EFE1D5532B5821B5008AAEDD /* QuestionnaireViewModel.swift in Sources */,
 				EFE1D5822B5B1831008AAEDD /* CoordinatorView.swift in Sources */,
-				EFE1D56C2B5AA021008AAEDD /* NMClientsService.swift in Sources */,
+				EFE1D56C2B5AA021008AAEDD /* CertificatesService.swift in Sources */,
 				EF2C7E872B62BDC9006B94A6 /* CanvasCoordinator.swift in Sources */,
-				EFDFC1D62B6A711800FE44B9 /* NMPalette.swift in Sources */,
-				EFE1D5552B588546008AAEDD /* NMQuestionView.swift in Sources */,
+				EFDFC1D62B6A711800FE44B9 /* Color+Custom.swift in Sources */,
+				EFE1D5552B588546008AAEDD /* QuestionView.swift in Sources */,
 				EFC933642B69555A00DB3BB1 /* LoadingView.swift in Sources */,
-				EF6491802B6A4EE600657F2D /* Preview.swift in Sources */,
 				EFE1D5852B5B25F6008AAEDD /* CoordinatorViewModel.swift in Sources */,
+				EF9EB7402B77AEB800961BDD /* NMLocalization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -902,6 +953,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF9EB74F2B7C2F5B00961BDD /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EF51D6072AF0FA7C0081CD36 /* Project object */;
 }

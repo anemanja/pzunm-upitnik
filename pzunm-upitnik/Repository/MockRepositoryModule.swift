@@ -7,45 +7,26 @@
 
 import Foundation
 
-public final class QuestionsRepository: NMQuestionsRepository {
-    public func getQuestions(for language: NMLanguage) async -> Result<NMQuestionnaire, GenericError> {
-        .success(NMQuestionnaire(
-            language: .srb,
-            title: "UPITNIK ZA PODNOSIOCA ZAHTJEVA ZA LJEKARSKO UVJERENJE",
-            introduction: "Postovani, ovo je upitnik koji nam pruža uvid u vaše prethodno zdravstveno stanje. Molimo vas da pažljivo pročitate pitanja i iskreno odgovorite zaokruzivanjem tačnog odgovora. Ukoliko je odgovor na pitanje pozitivan, objasnite detaljnije na praznoj liniji ispod odgovora. Vjerodostojnost vašeg odgovora garantujete svojeručnim potpisom.",
-            questions: [
-                NMQuestion(formulation: "Da li ste imali ili imate neku prirodnu ili stečenu bolest organa vida?", answer: .none),
-                NMQuestion(formulation: "Da li ste imali ili imate urođene ili stečene bolesti organa sluha ili ravnoteže?", answer: .none),
-                NMQuestion(formulation: "Da li bolujete od neke duševne bolesti?", answer: .none),
-                NMQuestion(formulation: "Da li ste bolovali ili bolujete od neke bolesti zavisnosti (alkoholizam, toksikomanija, zloupotreba psihotropnih supstanci)?", answer: .none)
-            ]))
-    }
-}
-
-public final class ClientsRepository: NMClientsRepository {
-    public func getClients() async -> Result<[NMClient], GenericError> {
+public final class MockClientsRepository: CertificatesRepositoryProtocol {
+    public func getCertificates() async -> Result<[NMCertificate], GenericError> {
         return .success([
-            NMClient(id: "0012301", name: "Murat", surname: "Osmanoglu",
+            NMCertificate(id: "0012301", ime: "Murat", prezime: "Osmanoglu",
                      language: .tur, hasCompletedQuestionnaire: false),
-            NMClient(id: "0233540", name: "Berat", surname: "Krasnichi",
+            NMCertificate(id: "0233540", ime: "Berat", prezime: "Krasnichi",
                      language: .alb, hasCompletedQuestionnaire: true),
-            NMClient(id: "0003153", name: "Radovan", surname: "Berović",
+            NMCertificate(id: "0003153", ime: "Radovan", prezime: "Berović",
                      language: .srb, hasCompletedQuestionnaire: false),
-            NMClient(id: "1125003", name: "Osman", surname: "Jagluk",
+            NMCertificate(id: "1125003", ime: "Osman", prezime: "Jagluk",
                      language: .tur, hasCompletedQuestionnaire: true),
-            NMClient(id: "0002318", name: "Vukomir", surname: "Avramović",
+            NMCertificate(id: "0002318", ime: "Vukomir", prezime: "Avramović",
                      language: .srb, hasCompletedQuestionnaire: false)
         ])
     }
 }
 
-public final class AuthenticationRepository: NMAuthenticationRepository {
+public final class MockAuthenticationRepository: AuthenticationRepositoryProtocol {
     public func authenticateUser(with username: String, and password: String) async -> Result<Void, GenericError> {
-        if username == "ricko" && password == "vukomir" {
-            return .success(())
-        }
-        
-        if username == "jelena" && password == "nemanja" {
+        if username == "admin" && password == "admin" {
             return .success(())
         }
         
@@ -53,15 +34,32 @@ public final class AuthenticationRepository: NMAuthenticationRepository {
     }
 }
 
-public final class PDFRepository: NMPDFRepository {
+public final class MockPDFRepository: PDFRepositoryProtocol {
     public func uploadPDF(at path: URL, for clientId: String) async -> Result<Void, GenericError> {
         .success(())
     }
 }
 
+public final class MockLocalizationRepository: LocalizationRepositoryProtocol {
+    public func localization(for language: NMLanguage) -> Result<NMLocalization, GenericError> {
+        .success(NMLocalization(language: NMLanguage.srb, title: "UPITNIK", introduction: "UPITNIK ZA PODNOSIOCA ZAHTJEVA ZA LJEKARSKO UVJERENJE", questions: [], signature: "Potpis", yes: "DA", no: "NE", confirm: "Potvrdi", eraseSignature: "Makni potpis", submit: "Predaj", cancel: "Odustani", explanation: "Objašnjenje"))
+    }
+}
+
 public class MockRepositoryModule {
-    public let authentication: any NMAuthenticationRepository = AuthenticationRepository()
-    public let clients: any NMClientsRepository = ClientsRepository()
-    public let questions: any NMQuestionsRepository = QuestionsRepository()
-    public let pdf: any NMPDFRepository = PDFRepository()
+    public let authentication: any AuthenticationRepositoryProtocol
+    public let certificates: any CertificatesRepositoryProtocol
+    public let pdf: any PDFRepositoryProtocol
+    public let localization: any LocalizationRepositoryProtocol
+
+    init(authentication: any AuthenticationRepositoryProtocol = MockAuthenticationRepository(),
+         certificates: any CertificatesRepositoryProtocol = MockClientsRepository(),
+         pdf: any PDFRepositoryProtocol = MockPDFRepository(),
+         localization: any LocalizationRepositoryProtocol = MockLocalizationRepository()
+    ) {
+        self.authentication = authentication
+        self.certificates = certificates
+        self.pdf = pdf
+        self.localization = localization
+    }
 }
