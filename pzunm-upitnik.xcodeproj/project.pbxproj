@@ -12,6 +12,22 @@
 		EF2C7E8C2B62D015006B94A6 /* NMQuestionnairePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C7E8B2B62D015006B94A6 /* NMQuestionnairePreview.swift */; };
 		EF2C7E8E2B62D0E1006B94A6 /* QuestionnairePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C7E8D2B62D0E1006B94A6 /* QuestionnairePreviewView.swift */; };
 		EF2C7E902B62D936006B94A6 /* QuestionPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C7E8F2B62D936006B94A6 /* QuestionPreviewView.swift */; };
+		EF3379A42B80DB9A00B5E9ED /* QuestionPreviewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3379A32B80DB9A00B5E9ED /* QuestionPreviewButton.swift */; };
+		EF3379A62B80F51D00B5E9ED /* PDFSubmitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3379A52B80F51D00B5E9ED /* PDFSubmitView.swift */; };
+		EF4FAD742B85FA7C00257A8A /* Bundle+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD732B85FA7C00257A8A /* Bundle+Version.swift */; };
+		EF4FAD762B865DA600257A8A /* NMCertificateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD752B865DA600257A8A /* NMCertificateType.swift */; };
+		EF4FAD782B87477400257A8A /* QuestionnaireStatusRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD772B87477400257A8A /* QuestionnaireStatusRepositoryProtocol.swift */; };
+		EF4FAD7A2B874A8B00257A8A /* PDFRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD792B874A8B00257A8A /* PDFRepositoryProtocol.swift */; };
+		EF4FAD7C2B874B0900257A8A /* LocalizationRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD7B2B874B0900257A8A /* LocalizationRepositoryProtocol.swift */; };
+		EF4FAD802B874BA800257A8A /* AuthenticationRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD7F2B874BA800257A8A /* AuthenticationRepositoryProtocol.swift */; };
+		EF4FAD822B874BC800257A8A /* CertificatesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD812B874BC800257A8A /* CertificatesRepositoryProtocol.swift */; };
+		EF4FAD882B874D5E00257A8A /* QuestionnaireStatusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD872B874D5E00257A8A /* QuestionnaireStatusRepository.swift */; };
+		EF4FAD8A2B88263500257A8A /* PDFRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD892B88263500257A8A /* PDFRepository.swift */; };
+		EF4FAD8C2B88468000257A8A /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD8B2B88468000257A8A /* ErrorView.swift */; };
+		EF4FAD8E2B8852ED00257A8A /* PDFSubmitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD8D2B8852ED00257A8A /* PDFSubmitViewModel.swift */; };
+		EF4FAD902B885B9400257A8A /* DependencyAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD8F2B885B9400257A8A /* DependencyAssembler.swift */; };
+		EF4FAD922B891A2900257A8A /* IntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD912B891A2900257A8A /* IntroductionView.swift */; };
+		EF4FAD942B891C6F00257A8A /* SignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD932B891C6F00257A8A /* SignatureView.swift */; };
 		EF51A26E2B73CCB100537099 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51A26D2B73CCB100537099 /* CardView.swift */; };
 		EF51D6132AF0FA7C0081CD36 /* pzunm_upitnikApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51D6122AF0FA7C0081CD36 /* pzunm_upitnikApp.swift */; };
 		EF51D6172AF0FA7F0081CD36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF51D6162AF0FA7F0081CD36 /* Assets.xcassets */; };
@@ -47,7 +63,6 @@
 		EFE1D55F2B5A9EEC008AAEDD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D55E2B5A9EEC008AAEDD /* MainView.swift */; };
 		EFE1D56A2B5AA00D008AAEDD /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5692B5AA00D008AAEDD /* AuthenticationService.swift */; };
 		EFE1D56C2B5AA021008AAEDD /* CertificatesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D56B2B5AA021008AAEDD /* CertificatesService.swift */; };
-		EFE1D56E2B5AA047008AAEDD /* QuestionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D56D2B5AA047008AAEDD /* QuestionsService.swift */; };
 		EFE1D5702B5AA09A008AAEDD /* PDFService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D56F2B5AA09A008AAEDD /* PDFService.swift */; };
 		EFE1D5722B5AA0B8008AAEDD /* NMLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5712B5AA0B8008AAEDD /* NMLanguage.swift */; };
 		EFE1D5742B5AA279008AAEDD /* NMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5732B5AA279008AAEDD /* NMUser.swift */; };
@@ -86,6 +101,22 @@
 		EF2C7E8B2B62D015006B94A6 /* NMQuestionnairePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMQuestionnairePreview.swift; sourceTree = "<group>"; };
 		EF2C7E8D2B62D0E1006B94A6 /* QuestionnairePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnairePreviewView.swift; sourceTree = "<group>"; };
 		EF2C7E8F2B62D936006B94A6 /* QuestionPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPreviewView.swift; sourceTree = "<group>"; };
+		EF3379A32B80DB9A00B5E9ED /* QuestionPreviewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPreviewButton.swift; sourceTree = "<group>"; };
+		EF3379A52B80F51D00B5E9ED /* PDFSubmitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFSubmitView.swift; sourceTree = "<group>"; };
+		EF4FAD732B85FA7C00257A8A /* Bundle+Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Version.swift"; sourceTree = "<group>"; };
+		EF4FAD752B865DA600257A8A /* NMCertificateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMCertificateType.swift; sourceTree = "<group>"; };
+		EF4FAD772B87477400257A8A /* QuestionnaireStatusRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireStatusRepositoryProtocol.swift; sourceTree = "<group>"; };
+		EF4FAD792B874A8B00257A8A /* PDFRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFRepositoryProtocol.swift; sourceTree = "<group>"; };
+		EF4FAD7B2B874B0900257A8A /* LocalizationRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationRepositoryProtocol.swift; sourceTree = "<group>"; };
+		EF4FAD7F2B874BA800257A8A /* AuthenticationRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepositoryProtocol.swift; sourceTree = "<group>"; };
+		EF4FAD812B874BC800257A8A /* CertificatesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatesRepositoryProtocol.swift; sourceTree = "<group>"; };
+		EF4FAD872B874D5E00257A8A /* QuestionnaireStatusRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireStatusRepository.swift; sourceTree = "<group>"; };
+		EF4FAD892B88263500257A8A /* PDFRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFRepository.swift; sourceTree = "<group>"; };
+		EF4FAD8B2B88468000257A8A /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		EF4FAD8D2B8852ED00257A8A /* PDFSubmitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFSubmitViewModel.swift; sourceTree = "<group>"; };
+		EF4FAD8F2B885B9400257A8A /* DependencyAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyAssembler.swift; sourceTree = "<group>"; };
+		EF4FAD912B891A2900257A8A /* IntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionView.swift; sourceTree = "<group>"; };
+		EF4FAD932B891C6F00257A8A /* SignatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureView.swift; sourceTree = "<group>"; };
 		EF51A26D2B73CCB100537099 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		EF51D60F2AF0FA7C0081CD36 /* pzunm-upitnik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pzunm-upitnik.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF51D6122AF0FA7C0081CD36 /* pzunm_upitnikApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pzunm_upitnikApp.swift; sourceTree = "<group>"; };
@@ -125,7 +156,6 @@
 		EFE1D55E2B5A9EEC008AAEDD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EFE1D5692B5AA00D008AAEDD /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		EFE1D56B2B5AA021008AAEDD /* CertificatesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatesService.swift; sourceTree = "<group>"; };
-		EFE1D56D2B5AA047008AAEDD /* QuestionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsService.swift; sourceTree = "<group>"; };
 		EFE1D56F2B5AA09A008AAEDD /* PDFService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFService.swift; sourceTree = "<group>"; };
 		EFE1D5712B5AA0B8008AAEDD /* NMLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMLanguage.swift; sourceTree = "<group>"; };
 		EFE1D5732B5AA279008AAEDD /* NMUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMUser.swift; sourceTree = "<group>"; };
@@ -183,9 +213,48 @@
 			isa = PBXGroup;
 			children = (
 				EF2C7E8F2B62D936006B94A6 /* QuestionPreviewView.swift */,
+				EF3379A32B80DB9A00B5E9ED /* QuestionPreviewButton.swift */,
 				EF2C7E8D2B62D0E1006B94A6 /* QuestionnairePreviewView.swift */,
+				EF3379A52B80F51D00B5E9ED /* PDFSubmitView.swift */,
+				EF4FAD8D2B8852ED00257A8A /* PDFSubmitViewModel.swift */,
 			);
 			path = Preview;
+			sourceTree = "<group>";
+		};
+		EF4FAD832B874C1200257A8A /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D5692B5AA00D008AAEDD /* AuthenticationService.swift */,
+				EF4FAD7F2B874BA800257A8A /* AuthenticationRepositoryProtocol.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		EF4FAD842B874C2700257A8A /* Certificates */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D56B2B5AA021008AAEDD /* CertificatesService.swift */,
+				EF4FAD812B874BC800257A8A /* CertificatesRepositoryProtocol.swift */,
+			);
+			path = Certificates;
+			sourceTree = "<group>";
+		};
+		EF4FAD852B874C3100257A8A /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D5502B581A83008AAEDD /* LocalizationService.swift */,
+				EF4FAD7B2B874B0900257A8A /* LocalizationRepositoryProtocol.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		EF4FAD862B874C3E00257A8A /* PDF */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D56F2B5AA09A008AAEDD /* PDFService.swift */,
+				EF4FAD792B874A8B00257A8A /* PDFRepositoryProtocol.swift */,
+			);
+			path = PDF;
 			sourceTree = "<group>";
 		};
 		EF51D6062AF0FA7C0081CD36 = {
@@ -220,8 +289,11 @@
 				EFE1D5592B59B202008AAEDD /* View */,
 				EFE1D5832B5B25DC008AAEDD /* Coordinator */,
 				EF51D6122AF0FA7C0081CD36 /* pzunm_upitnikApp.swift */,
+				EF4FAD8F2B885B9400257A8A /* DependencyAssembler.swift */,
 				EFDFC1D52B6A711800FE44B9 /* Color+Custom.swift */,
 				EFEB776B2B69A3AF004FA9A8 /* TextInputViews.swift */,
+				EF4FAD8B2B88468000257A8A /* ErrorView.swift */,
+				EF4FAD732B85FA7C00257A8A /* Bundle+Version.swift */,
 				EF51D6162AF0FA7F0081CD36 /* Assets.xcassets */,
 				EF51D61B2AF0FA7F0081CD36 /* pzunm_upitnik.entitlements */,
 				EF51D6182AF0FA7F0081CD36 /* Preview Content */,
@@ -285,7 +357,8 @@
 			isa = PBXGroup;
 			children = (
 				EFE1D5542B588545008AAEDD /* QuestionView.swift */,
-				EF51A26D2B73CCB100537099 /* CardView.swift */,
+				EF4FAD912B891A2900257A8A /* IntroductionView.swift */,
+				EF4FAD932B891C6F00257A8A /* SignatureView.swift */,
 				EFB1E1A02B6D9689008C1B77 /* ToggleView.swift */,
 				EFFB1D192B6C467500E25C89 /* QuestionnaireButton.swift */,
 			);
@@ -316,8 +389,9 @@
 		EFE1D5592B59B202008AAEDD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EFE1D5622B5A9F34008AAEDD /* Certificate */,
 				EFE1D5612B5A9F1F008AAEDD /* Main */,
+				EFE1D5622B5A9F34008AAEDD /* Certificate */,
+				EF51A26D2B73CCB100537099 /* CardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -327,7 +401,7 @@
 			children = (
 				EFE1D55E2B5A9EEC008AAEDD /* MainView.swift */,
 				EFEB776D2B69A3CB004FA9A8 /* Authentication */,
-				EFEB776E2B69A3E5004FA9A8 /* Clients */,
+				EFEB776E2B69A3E5004FA9A8 /* Certificates */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -376,6 +450,7 @@
 			children = (
 				EFE1D5652B5A9FAB008AAEDD /* Questionnaire */,
 				EFE1D55A2B59B214008AAEDD /* NMCertificate.swift */,
+				EF4FAD752B865DA600257A8A /* NMCertificateType.swift */,
 				EFE1D5712B5AA0B8008AAEDD /* NMLanguage.swift */,
 				EF9EB73F2B77AEB800961BDD /* NMLocalization.swift */,
 			);
@@ -385,13 +460,13 @@
 		EFE1D5682B5A9FF6008AAEDD /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				EFC933622B69540C00DB3BB1 /* Loading */,
 				EFE1D57C2B5AAF5A008AAEDD /* ServiceModule.swift */,
-				EFE1D5692B5AA00D008AAEDD /* AuthenticationService.swift */,
-				EFE1D56B2B5AA021008AAEDD /* CertificatesService.swift */,
-				EFE1D56D2B5AA047008AAEDD /* QuestionsService.swift */,
-				EFE1D5502B581A83008AAEDD /* LocalizationService.swift */,
-				EFE1D56F2B5AA09A008AAEDD /* PDFService.swift */,
+				EFC933622B69540C00DB3BB1 /* Loading */,
+				EF4FAD832B874C1200257A8A /* Authentication */,
+				EF4FAD842B874C2700257A8A /* Certificates */,
+				EF4FAD852B874C3100257A8A /* Localization */,
+				EF4FAD862B874C3E00257A8A /* PDF */,
+				EF4FAD772B87477400257A8A /* QuestionnaireStatusRepositoryProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -403,6 +478,8 @@
 				EFE1D57A2B5AA4C4008AAEDD /* MockRepositoryModule.swift */,
 				EF9EB7432B7833C500961BDD /* CertificatesRepository.swift */,
 				EF9EB7532B7D7DEE00961BDD /* LocalizationRepository.swift */,
+				EF4FAD872B874D5E00257A8A /* QuestionnaireStatusRepository.swift */,
+				EF4FAD892B88263500257A8A /* PDFRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -425,14 +502,14 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
-		EFEB776E2B69A3E5004FA9A8 /* Clients */ = {
+		EFEB776E2B69A3E5004FA9A8 /* Certificates */ = {
 			isa = PBXGroup;
 			children = (
 				EFC933652B69822700DB3BB1 /* CertificatesViewModel.swift */,
 				EF8DA5952B5F296600738D84 /* CertificateListItemView.swift */,
 				EFEB77692B69A2C4004FA9A8 /* CertificatesView.swift */,
 			);
-			path = Clients;
+			path = Certificates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -572,21 +649,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF4FAD7A2B874A8B00257A8A /* PDFRepositoryProtocol.swift in Sources */,
+				EF4FAD8E2B8852ED00257A8A /* PDFSubmitViewModel.swift in Sources */,
 				EFE1D55D2B5A9EDF008AAEDD /* LanguagesView.swift in Sources */,
 				EFE1D5742B5AA279008AAEDD /* NMUser.swift in Sources */,
 				EF9EB74E2B7C2DD300961BDD /* Endpoint+NM.swift in Sources */,
 				EF2C7E842B62A74A006B94A6 /* CanvasView.swift in Sources */,
 				EFC9335F2B6953A300DB3BB1 /* LoadingState.swift in Sources */,
 				EFE1D54F2B5819AC008AAEDD /* NMQuestion.swift in Sources */,
-				EFE1D56E2B5AA047008AAEDD /* QuestionsService.swift in Sources */,
 				EFE1D55B2B59B214008AAEDD /* NMCertificate.swift in Sources */,
 				EF9EB74C2B7C2D8B00961BDD /* APIConfiguration.swift in Sources */,
+				EF4FAD922B891A2900257A8A /* IntroductionView.swift in Sources */,
 				EFE1D5722B5AA0B8008AAEDD /* NMLanguage.swift in Sources */,
 				EFE1D56A2B5AA00D008AAEDD /* AuthenticationService.swift in Sources */,
 				EF8DA5962B5F296600738D84 /* CertificateListItemView.swift in Sources */,
 				EFE1D5772B5AA39A008AAEDD /* GenericError.swift in Sources */,
 				EFE1D5512B581A83008AAEDD /* LocalizationService.swift in Sources */,
+				EF4FAD882B874D5E00257A8A /* QuestionnaireStatusRepository.swift in Sources */,
 				EFB1E19F2B6D7D24008C1B77 /* SectionHeaderView.swift in Sources */,
+				EF4FAD782B87477400257A8A /* QuestionnaireStatusRepositoryProtocol.swift in Sources */,
+				EF4FAD902B885B9400257A8A /* DependencyAssembler.swift in Sources */,
 				EFC933662B69822700DB3BB1 /* CertificatesViewModel.swift in Sources */,
 				EFE1D57D2B5AAF5A008AAEDD /* ServiceModule.swift in Sources */,
 				EFE1D57F2B5AB774008AAEDD /* AuthenticationViewModel.swift in Sources */,
@@ -594,12 +676,14 @@
 				EFC933612B6953E600DB3BB1 /* LoadingObject.swift in Sources */,
 				EF51A26E2B73CCB100537099 /* CardView.swift in Sources */,
 				EFEB776A2B69A2C4004FA9A8 /* CertificatesView.swift in Sources */,
+				EF4FAD8A2B88263500257A8A /* PDFRepository.swift in Sources */,
 				EF9EB7442B7833C500961BDD /* CertificatesRepository.swift in Sources */,
 				EFE1D57B2B5AA4C4008AAEDD /* MockRepositoryModule.swift in Sources */,
 				EF2C7E902B62D936006B94A6 /* QuestionPreviewView.swift in Sources */,
 				EF51D6132AF0FA7C0081CD36 /* pzunm_upitnikApp.swift in Sources */,
 				EFE1D55F2B5A9EEC008AAEDD /* MainView.swift in Sources */,
 				EFFB1D1A2B6C467500E25C89 /* QuestionnaireButton.swift in Sources */,
+				EF3379A42B80DB9A00B5E9ED /* QuestionPreviewButton.swift in Sources */,
 				EF2C7E8C2B62D015006B94A6 /* NMQuestionnairePreview.swift in Sources */,
 				EFE1D5572B59A56C008AAEDD /* QuestionnaireView.swift in Sources */,
 				EF9EB7542B7D7DEE00961BDD /* LocalizationRepository.swift in Sources */,
@@ -607,16 +691,24 @@
 				EFB1E1A12B6D9689008C1B77 /* ToggleView.swift in Sources */,
 				EFEB776C2B69A3AF004FA9A8 /* TextInputViews.swift in Sources */,
 				EFE1D5782B5AA39A008AAEDD /* Logger.swift in Sources */,
+				EF4FAD822B874BC800257A8A /* CertificatesRepositoryProtocol.swift in Sources */,
+				EF4FAD8C2B88468000257A8A /* ErrorView.swift in Sources */,
 				EFE1D5702B5AA09A008AAEDD /* PDFService.swift in Sources */,
+				EF4FAD742B85FA7C00257A8A /* Bundle+Version.swift in Sources */,
 				EF2C7E8E2B62D0E1006B94A6 /* QuestionnairePreviewView.swift in Sources */,
+				EF4FAD7C2B874B0900257A8A /* LocalizationRepositoryProtocol.swift in Sources */,
 				EFE1D5532B5821B5008AAEDD /* QuestionnaireViewModel.swift in Sources */,
 				EFE1D5822B5B1831008AAEDD /* CoordinatorView.swift in Sources */,
 				EFE1D56C2B5AA021008AAEDD /* CertificatesService.swift in Sources */,
 				EF2C7E872B62BDC9006B94A6 /* CanvasCoordinator.swift in Sources */,
 				EFDFC1D62B6A711800FE44B9 /* Color+Custom.swift in Sources */,
+				EF4FAD802B874BA800257A8A /* AuthenticationRepositoryProtocol.swift in Sources */,
+				EF4FAD942B891C6F00257A8A /* SignatureView.swift in Sources */,
+				EF4FAD762B865DA600257A8A /* NMCertificateType.swift in Sources */,
 				EFE1D5552B588546008AAEDD /* QuestionView.swift in Sources */,
 				EFC933642B69555A00DB3BB1 /* LoadingView.swift in Sources */,
 				EFE1D5852B5B25F6008AAEDD /* CoordinatorViewModel.swift in Sources */,
+				EF3379A62B80F51D00B5E9ED /* PDFSubmitView.swift in Sources */,
 				EF9EB7402B77AEB800961BDD /* NMLocalization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -788,6 +880,7 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -825,6 +918,7 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

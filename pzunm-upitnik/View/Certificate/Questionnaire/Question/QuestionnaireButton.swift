@@ -7,31 +7,6 @@
 
 import SwiftUI
 
-struct QuestionnaireButton: View {
-    @State var isSelected = false
-    var systemName: String
-    @State var answerSelection: Bool
-    @Binding var answer: Bool
-    
-    var body: some View {
-        HStack {
-            Image(systemName: "\(systemName).circle" + (isSelected ? ".fill" : ""))
-                .questionnaireButtonModifier()
-                .onTapGesture {
-                    isSelected.toggle()
-                    answer = (answerSelection == isSelected)
-                }
-        }
-    }
-}
-
-struct QuestionnaireButton_Previews: PreviewProvider {
-    @State static var isSelected = true
-    static var previews: some View {
-        QuestionnaireButton(systemName: "checkmark", answerSelection: true, answer: $isSelected)
-    }
-}
-
 extension Image {
     func questionnaireButtonModifier() -> some View {
         self

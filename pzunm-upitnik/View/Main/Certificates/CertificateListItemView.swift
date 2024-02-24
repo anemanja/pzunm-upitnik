@@ -19,7 +19,7 @@ struct CertificateListItemView: View {
                     .font(.title)
                     .fontDesign(.monospaced)
                     .frame(minWidth: 70.0, alignment: .trailing)
-                Text(certificate.prezime + " " + certificate.ime)
+                Text(certificate.surname + " " + certificate.name)
                     .font(.title)
                     .padding(.horizontal)
 

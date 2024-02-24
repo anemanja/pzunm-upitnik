@@ -8,54 +8,60 @@
 import SwiftUI
 
 struct QuestionnairePreviewView: View {
-    @Environment(\.dismiss) var dismiss
-    @EnvironmentObject var viewModel: QuestionnaireViewModel
-    
-    @State var questionnairePreview: NMQuestionnairePreview
+    private var questionnairePreview: NMQuestionnairePreview
+
+    init(questionnairePreview: NMQuestionnairePreview) {
+        self.questionnairePreview = questionnairePreview
+    }
     
     var body: some View {
-        VStack {
-            VStack {
-                Text(questionnairePreview.title)
-                Text(questionnairePreview.introduction)
-                    .padding()
-                List(questionnairePreview.questions, id: \.hashValue) { question in
-                    HStack (alignment: .top) {
-                        Text(String(1 + (questionnairePreview.questions.firstIndex(of: question) ?? 0)) + ".")
-                        QuestionPreviewView(question: question)
-                            .listRowSeparatorTint(.black)
-                    }
-                }
-                .listStyle(.plain)
-                Group {
-                    Text("Svojerucni potpis:")
-                    questionnairePreview.signatureView
-                }
-                .padding()
+        VStack (alignment: .leading) {
+            HStack (alignment: .top) {
+                // TODO: Add timestamp
+                Text("PZU NAŠA MEDICINA v\(Bundle.main.releaseVersionNumber).\(Bundle.main.buildVersionNumber)")
+                    .foregroundColor(.nmPrimary)
+                    .font(.system(size: 12.0, weight: .bold, design: .serif))
+                Spacer()
+                Text(questionnairePreview.certificateId)
+                    .font(.system(size: 12.0))
+                    .fontDesign(.monospaced)
+                    .foregroundColor(.blue)
             }
-            .padding()
-            .border(.black)
-            Button("Predaj", action: submit)
-                .buttonStyle(.borderedProminent)
-                .accentColor(.nmTitle)
-        }
-        .padding(.horizontal)
-    }
-    
-    func submit() {
-        viewModel.sendPDF(for: questionnairePreview.certificateId)
-    }
-}
+            .padding(.bottom, 5.0)
 
-struct NMQuestionnairePreviewView_Previews: PreviewProvider {
-    static var previews: some View {
-        QuestionnairePreviewView(questionnairePreview: NMQuestionnairePreview(certificateId: "003210", title: "Upitnik", introduction: "Intro", questions: [
-            NMQuestion(formulation: "Kojekude?", answer: .yes, explanation: "Kojekude..."),
-            NMQuestion(formulation: "Da li ste nekada bili skloni neprilagodjenom ponašanju (dolazili u sukob sa zakonom ili ispoljili izrazitu socijalnu i emocionalnu nestabilnost)?", answer: .yes, explanation: "Narusavanje javnog reda i mira. Narusavanje javnog reda i mira. Narusavanje javnog reda i mira. Narusavanje javnog reda i mira."),
-            NMQuestion(formulation: "Da li ste nekada bili skloni neprilagodjenom ponašanju (dolazili u sukob sa zakonom ili ispoljili izrazitu socijalnu i emocionalnu nestabilnost)?", answer: .no, explanation: "Urinirao na vratima javne ustanove."),
-            NMQuestion(formulation: "Kojekude?", answer: .no, explanation: "Kojekude...")
-        ], signatureView: Image(systemName: "signature"))
-        )
-        .environmentObject(QuestionnaireViewModel(pdfService: NMPDFServiceImplementation(repository: MockRepositoryModule().pdf), localizationService: LocalizationService(localizationRepository: MockLocalizationRepository())))
+            HStack {
+                Spacer()
+                Text(questionnairePreview.title)
+                    .font(.system(size: 12.0, weight: .bold, design: .serif))
+                    .textCase(.uppercase)
+                    .multilineTextAlignment(.center)
+                Spacer()
+            }
+            .padding(.bottom, 5.0)
+
+            Text(questionnairePreview.introduction)
+                .font(.system(size: 9.0, weight: .ultraLight, design: .serif))
+                .padding(.bottom, 5.0)
+
+            ForEach(questionnairePreview.questions, id: \.hashValue) { question in
+                QuestionPreviewView(question: question,
+                                    yesLabel: questionnairePreview.yesLabel,
+                                    noLabel: questionnairePreview.noLabel)
+                .listRowSeparatorTint(.black)
+            }
+            .listStyle(.plain)
+
+            Spacer()
+
+            HStack {
+                Spacer()
+                questionnairePreview.signatureView
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 300)
+            }
+        }
+        .frame(width: 550, height: 800)
+        .padding()
     }
 }

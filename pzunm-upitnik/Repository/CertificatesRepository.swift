@@ -8,7 +8,7 @@
 import Foundation
 import Networking
 
-class CertificatesRepositoryImplementation: CertificatesRepositoryProtocol {
+class CertificatesRepository: CertificatesRepositoryProtocol {
     private let apiClient: APIClient<Endpoint>
 
     init(apiClient: APIClient<Endpoint>) {

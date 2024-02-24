@@ -15,13 +15,12 @@ class NMRequestBuilder: RequestBuilderProtocol {
     func initiate() throws -> Self {
         var components = URLComponents()
         components.scheme = APIConfiguration.scheme.rawValue
+        components.port = Int(APIConfiguration.port.rawValue)
         components.host = APIConfiguration.host.rawValue
         guard let url = components.url else {
             throw NetworkError.invalidURL
         }
         request = URLRequest(url: url)
-
-        request?.addValue("application/json", forHTTPHeaderField: "Content-Type")
         return self
     }
 
@@ -68,6 +67,7 @@ class NMRequestBuilder: RequestBuilderProtocol {
         guard request != nil, request?.url != nil else {
             throw NetworkError.uninitiatedRequestBuilder
         }
+        request?.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request?.httpBody?.append(data)
         return self
     }

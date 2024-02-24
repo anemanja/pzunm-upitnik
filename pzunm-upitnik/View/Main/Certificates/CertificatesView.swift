@@ -8,29 +8,29 @@
 import SwiftUI
 
 struct CertificatesView: View {
-    @EnvironmentObject var coordinatorViewModel: CoordinatorViewModel
-    @EnvironmentObject var viewModel: CertificatesViewModel
-    @Binding var shouldShowAll: Bool
+    @EnvironmentObject private var coordinatorViewModel: CoordinatorViewModel
+    @ObservedObject private var viewModel: CertificatesViewModel
+    @Binding private var shouldShowAll: Bool
+
+    init(viewModel: CertificatesViewModel, shouldShowAll: Binding<Bool>) {
+        self.viewModel = viewModel
+        self._shouldShowAll = shouldShowAll
+    }
     
     var body: some View {
         LoadingView(source: viewModel) {
-            Button("Učitaj aktivne klijente") {
+            Button("Učitaj aktivna uvjerenja") {
                 viewModel.load(includingCompleted: shouldShowAll)
             }
             .buttonStyle(.borderedProminent)
             .accentColor(.nmTitle)
         } loader: { _ in
             ProgressView()
+                .foregroundColor(.nmPrimary)
         } error: { error in
-            VStack {
-                Image(systemName: "exclamationmark.triangle")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxHeight: 50.0)
-                Text(error.description)
-                    .padding()
+            ErrorView(error) {
+                viewModel.load(includingCompleted: shouldShowAll)
             }
-            .foregroundColor(.nmError)
         } content: { certificates in
             List (certificates) { certificate in
                 CertificateListItemView(certificate: certificate,

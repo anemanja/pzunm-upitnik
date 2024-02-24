@@ -18,6 +18,7 @@ public struct NMQuestion: Identifiable, Hashable, Codable {
     init(index: Int, formulation: String, answer: NMAnswer = .none, explanation: String = "") {
         NMQuestion.incrementCount()
         self.id = NMQuestion.count
+        self.index = index
         self.formulation = formulation
         self.answer = answer
         self.explanation = explanation
@@ -55,7 +56,7 @@ public struct NMQuestionnaire: Codable {
         self.language = localization.language
         self.title = localization.title
         self.introduction = localization.introduction
-        self.questions = localization.questions.map{ NMQuestion(formulation: $0) }
+        self.questions = localization.questions.map{ $0.toQuestion() }
     }
 }
 

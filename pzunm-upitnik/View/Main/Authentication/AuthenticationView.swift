@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct AuthenticationView: View {
-    @EnvironmentObject var viewModel: AuthenticationViewModel
-    @Binding var isAuthenticated: Bool
-    @State var username: String = ""
-    @State var password: String = ""
-    @State var shouldExpand: Bool = false
+    @ObservedObject private var viewModel: AuthenticationViewModel
+    @Binding private var isAuthenticated: Bool
+    @State private var username: String = ""
+    @State private var password: String = ""
+    @State private var shouldExpand: Bool = false
+
+    init(viewModel: AuthenticationViewModel, isAuthenticated: Binding<Bool>) {
+        self.viewModel = viewModel
+        self._isAuthenticated = isAuthenticated
+    }
     
     var body: some View {
         HStack {

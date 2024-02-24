@@ -49,18 +49,20 @@ struct LargeTextInputView: View {
     }
     
     var body: some View {
-        
-        TextField(title, text: $text, axis: .vertical)
-            .textFieldStyle(.roundedBorder)
-            .lineLimit(minLineCount...maxLineCount)
-            .padding(.top, 12.0)
-            .textInputAutocapitalization(/*@START_MENU_TOKEN@*/.never/*@END_MENU_TOKEN@*/)
-            .disableAutocorrection(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
-            .padding(.horizontal, 36.0)
-            .ignoresSafeArea(.keyboard, edges: .bottom)
-            .done(doneTitle) {
-                onDone()
-            }
+        VStack (alignment: .center) {
+            TextField(title, text: $text, axis: .vertical)
+                .textFieldStyle(.roundedBorder)
+                .lineLimit(minLineCount...maxLineCount)
+                .padding(.top, 12.0)
+                .textInputAutocapitalization(/*@START_MENU_TOKEN@*/.never/*@END_MENU_TOKEN@*/)
+                .disableAutocorrection(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                .padding(.leading, 36.0)
+                .ignoresSafeArea(.keyboard, edges: .bottom)
+            Button(doneTitle, action: onDone)
+                .buttonStyle(.borderedProminent)
+                .accentColor(.nmTitle)
+//                .padding()
+        }
     }
 }
 
@@ -73,7 +75,7 @@ extension View {
                     Button(title, action: onDone)
                         .accentColor(.nmTitle)
                 }
-        }
+            }
     }
 }
 

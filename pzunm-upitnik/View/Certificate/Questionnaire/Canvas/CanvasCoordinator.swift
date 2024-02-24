@@ -12,26 +12,14 @@ import PencilKit
 class CanvasCoordinator: NSObject {
     var canvasView: Binding<PKCanvasView>
     let onSaved: () -> Void
-    let onBegan: () -> Void
-    let onEnded: () -> Void
     
-    init(canvasView: Binding<PKCanvasView>, onSaved: @escaping () -> Void, onBegan: @escaping () -> Void, onEnded: @escaping () -> Void) {
+    init(canvasView: Binding<PKCanvasView>, onSaved: @escaping () -> Void) {
         self.canvasView = canvasView
         self.onSaved = onSaved
-        self.onBegan = onBegan
-        self.onEnded = onEnded
     }
 }
 
-extension CanvasCoordinator: PKCanvasViewDelegate {
-    func canvasViewDidBeginUsingTool(_ canvasView: PKCanvasView) {
-        onBegan()
-    }
-    
-    func canvasViewDidEndUsingTool(_ canvasView: PKCanvasView) {
-        onEnded()
-    }
-    
+extension CanvasCoordinator: PKCanvasViewDelegate {    
     func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
         if !canvasView.drawing.bounds.isEmpty {
             onSaved()

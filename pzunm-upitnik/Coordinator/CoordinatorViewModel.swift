@@ -11,6 +11,14 @@ import SwiftUI
 final class CoordinatorViewModel: ObservableObject {
     @Published var path = NavigationPath()
     @Published var shouldCover = false
+
+    var dependencyContainer: DependencyContainer
+
+    init(path: NavigationPath = NavigationPath(), shouldCover: Bool = false, dependencyContainer: DependencyContainer) {
+        self.path = path
+        self.shouldCover = shouldCover
+        self.dependencyContainer = dependencyContainer
+    }
     
     var questionnairePreviewCoverData: NMQuestionnairePreview?
     

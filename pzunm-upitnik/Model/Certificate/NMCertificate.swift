@@ -8,37 +8,49 @@
 import Foundation
 
 public struct NMCertificate: Codable, Identifiable, Hashable {
-    public var id: String // Certificate Protocol Number
-    var ime: String
-    var prezime: String
+    public var id: Int
+    var name: String
+    var surname: String
     var language: NMLanguage?
     var hasCompletedQuestionnaire: Bool
+    var type: NMCertificateType
 
     enum CodingKeys: String, CodingKey {
         case id = "idUvjerenja"
-        case ime
-        case prezime
+        case name = "ime"
+        case surname = "prezime"
         case language
         case hasCompletedQuestionnaire
+        case type = "opis"
     }
 
-    init(id: String, ime: String, prezime: String, language: NMLanguage? = .srb, hasCompletedQuestionnaire: Bool) {
-        self.id = id//Int(id) ?? 0
-        self.ime = ime
-        self.prezime = prezime
+    init(id: Int, name: String, surname: String, language: NMLanguage?, hasCompletedQuestionnaire: Bool, type: NMCertificateType) {
+        self.id = id
+        self.name = name
+        self.surname = surname
         self.hasCompletedQuestionnaire = hasCompletedQuestionnaire
+        self.type = type
+    }
+
+    init(id: String, name: String, surname: String, language: NMLanguage? = .srb, hasCompletedQuestionnaire: Bool, type: NMCertificateType? = .other) {
+        self.id = Int(id) ?? 0
+        self.name = name
+        self.surname = surname
+        self.hasCompletedQuestionnaire = hasCompletedQuestionnaire
+        self.type = type ?? .other
     }
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(String.self, forKey: .id)
-        self.ime = try container.decode(String.self, forKey: .ime)
-        self.prezime = try container.decode(String.self, forKey: .prezime)
+        self.id = try container.decode(Int.self, forKey: .id)
+        self.name = try container.decode(String.self, forKey: .name)
+        self.surname = try container.decode(String.self, forKey: .surname)
         self.language = try container.decodeIfPresent(NMLanguage.self, forKey: .language)
         self.hasCompletedQuestionnaire = try container.decodeIfPresent(Bool.self, forKey: .hasCompletedQuestionnaire) ?? false
+        self.type = (try? container.decode(NMCertificateType.self, forKey: .type)) ?? .other
     }
 
     func idString() -> String {
-        id //String(format: "%05d", id)
+        String(format: "%05d", id)
     }
 }

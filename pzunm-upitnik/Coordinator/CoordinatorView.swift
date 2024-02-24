@@ -17,25 +17,20 @@ struct CoordinatorView: View {
                     if certificate.language == nil {
                         LanguagesView(certificate: certificate)
                     } else {
-                        QuestionnaireView(certificate: certificate)
+                        QuestionnaireView(viewModel: viewModel.dependencyContainer.questionnaireViewModel,
+                                          certificate: certificate)
                     }
                 }
         }
         .fullScreenCover(isPresented: $viewModel.shouldCover) {
             if let coverData = viewModel.questionnairePreviewCoverData {
-                QuestionnairePreviewView(questionnairePreview: coverData)
-                    .interactiveDismissDisabled()
+                PDFSubmitView(viewModel: viewModel.dependencyContainer.pdfSubmitViewModel, submitLabel: coverData.submitLabel, certificateId: coverData.certificateId) {
+                    QuestionnairePreviewView(questionnairePreview: coverData)
+                }
+//                    .interactiveDismissDisabled()
             } else {
                 Text("Invalid view data.")
             }
         }
-    }
-}
-
-struct CoordinatorView_Previews: PreviewProvider {
-    static var previews: some View {
-        CoordinatorView()
-            .previewDevice("iPad mini (6th generation)")
-            .environmentObject(CoordinatorViewModel())
     }
 }

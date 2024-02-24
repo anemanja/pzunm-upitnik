@@ -25,25 +25,16 @@ struct MainView: View {
                     .dynamicTypeSize(.xxxLarge)
                 Spacer()
                 CardView { _ in
-                    CertificatesView(shouldShowAll: $isAuthenticated)
+                    CertificatesView(viewModel: coordinatorViewModel.dependencyContainer.certificatesViewModel, shouldShowAll: $isAuthenticated)
                 }
                 .padding()
                 Spacer()
             }
             .background(Color.nmBackground)
             VStack {
-                AuthenticationView(isAuthenticated: $isAuthenticated)
+                AuthenticationView(viewModel: coordinatorViewModel.dependencyContainer.authenticationViewModel, isAuthenticated: $isAuthenticated)
                 Spacer()
             }
         }
-    }
-}
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-            .environmentObject(CoordinatorViewModel())
-            .environmentObject(CertificatesViewModel(certificatesService: CertificatesService(repository: MockRepositoryModule().certificates)))
-            .environmentObject(AuthenticationViewModel(authenticationService: AuthenticationService(repository: MockRepositoryModule().authentication)))
     }
 }

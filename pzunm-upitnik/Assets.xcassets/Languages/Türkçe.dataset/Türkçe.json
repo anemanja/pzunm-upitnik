@@ -1,6 +1,6 @@
 {
     "language": "Türkçe",
-    "introduction": "Sayın, bu bize önceki sağlık durumunuz hakkında fikir veren bir ankettir. Lütfen soruları dikkatlice\nokuyun ve doğru cevabı daire içine alarak dürüstçe cevaplayın. Sorunun cevabı olumlu ise cevabın\naltındaki boş satırda daha detaylı olarak açıklayınız. Cevabınızın gerçekliğini kendi imzanızla garanti\nediyorsunuz.",
+    "introduction": "Sayın, bu bize önceki sağlık durumunuz hakkında fikir veren bir ankettir. Lütfen soruları dikkatlice okuyun ve doğru cevabı daire içine alarak dürüstçe cevaplayın. Sorunun cevabı olumlu ise cevabın altındaki boş satırda daha detaylı olarak açıklayınız. Cevabınızın gerçekliğini kendi imzanızla garanti ediyorsunuz.",
     "title": "TIBBİ SERTİFİKA ANKETİ",
     "questions": [
         {"index": 1, "formulation": "Herhangi bir doğal veya sonradan edinilmiş göz hastalığınız oldu mu veya var mı?"},

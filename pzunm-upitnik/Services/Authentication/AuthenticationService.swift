@@ -11,14 +11,10 @@ public protocol AuthenticationServiceProtocol {
     func authenticateUser(with username: String, and password: String) async -> Result<Void, GenericError>
 }
 
-public protocol AuthenticationRepositoryProtocol {
-    func authenticateUser(with username: String, and password: String) async -> Result<Void, GenericError>
-}
-
 public final class AuthenticationService: AuthenticationServiceProtocol {
-    private let repository: AuthenticationRepositoryProtocol
+    private let repository: any AuthenticationRepositoryProtocol
     
-    init(repository: AuthenticationRepositoryProtocol) {
+    init(repository: any AuthenticationRepositoryProtocol) {
         self.repository = repository
     }
     

@@ -15,7 +15,7 @@ struct LanguagesView: View {
         ZStack {
             Color.nmBackground
             VStack (alignment: .center) {
-                Text(certificate.ime + " " + certificate.prezime)
+                Text(certificate.name + " " + certificate.surname)
                     .font(.largeTitle)
                 Text(certificate.idString())
                     .font(.largeTitle)
@@ -30,6 +30,7 @@ struct LanguagesView: View {
                                     .scaledToFill()
                                     .border(Color.nmPrimary, width: 1.0)
                                     .onTapGesture {
+                                        print(String(describing: language))
                                         certificate.language = language
                                         coordinatorViewModel.present(with: certificate)
                                     }
@@ -42,15 +43,5 @@ struct LanguagesView: View {
             }
             .padding()
         }
-    }
-}
-
-struct LanguagesView_Previews: PreviewProvider {
-    static var previews: some View {
-        LanguagesView(certificate: NMCertificate(id: "001037",
-                                         ime: "Nemanja", prezime: "Avramović",
-                                         language: nil,
-                                         hasCompletedQuestionnaire: false))
-        .environmentObject(CoordinatorViewModel())
     }
 }

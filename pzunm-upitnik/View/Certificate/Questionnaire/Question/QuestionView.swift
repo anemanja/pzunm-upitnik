@@ -8,18 +8,34 @@
 import SwiftUI
 
 struct QuestionView: View {
-    @Binding var answer: NMAnswer
-    @Binding var explanation: String
+    @State private var explanation = ""
+    @State private var answer: NMAnswer = .none
+    @State private var isYesSelected = false
+    @State private var isNoSelected = false
+    @State private var isEnabled = true
+    @FocusState private var isFocused: Bool
+
+    private var index: Int
+    private var question: String
+    private var yesLabelText = "DA"
+    private var noLabelText = "NE"
+    private var explanationPlaceholderText = "Objašnjenje..."
     
-    @State var index: Int
-    @State var question: String
-    @State var yesLabelText = "DA"
-    @State var noLabelText = "NE"
-    @State var explanationPlaceholderText = "Objašnjenje..."
-    @State var isYesSelected = false
-    @State var isNoSelected = false
-    
-    var onAllowedToContinue: () -> Void
+    private var onAllowedToContinue: (Bool, String) -> Void
+
+    init(explanation: String = "", answer: NMAnswer = .none, index: Int, question: String, yesLabelText: String = "DA", noLabelText: String = "NE", explanationPlaceholderText: String = "Objašnjenje...", isYesSelected: Bool = false, isNoSelected: Bool = false, isEnabled: Bool = true, onAllowedToContinue: @escaping (Bool, String) -> Void) {
+        self.explanation = explanation
+        self.answer = answer
+        self.index = index
+        self.question = question
+        self.yesLabelText = yesLabelText
+        self.noLabelText = noLabelText
+        self.explanationPlaceholderText = explanationPlaceholderText
+        self.isYesSelected = isYesSelected
+        self.isNoSelected = isNoSelected
+        self.isEnabled = isEnabled
+        self.onAllowedToContinue = onAllowedToContinue
+    }
     
     var body: some View {
         CardView { _ in
@@ -33,10 +49,10 @@ struct QuestionView: View {
                 
                 HStack (alignment: .top) {
                     Text("\(index).")
-                        .font(.title)
+                        .font(.system(size: 24.0))
                         .padding()
                     Text(question)
-                        .font(.title)
+                        .font(.system(size: 24.0))
                         .padding()
                     Spacer()
                 }
@@ -56,6 +72,7 @@ struct QuestionView: View {
                                secondaryColor: .blue, textColor: .nmPrimaryText,
                                backgroundColor: .nmTextBackground) {
                         isNoSelected = false
+                        isFocused = true
                         answer = .yes
                     }
                     
@@ -65,27 +82,33 @@ struct QuestionView: View {
                                text: noLabelText,
                                secondaryColor: .blue, textColor: .nmPrimaryText,
                                backgroundColor: .nmTextBackground) {
-                        isYesSelected = false
-                        answer = .no
-                        onAllowedToContinue()
+                        if isEnabled {
+                            isYesSelected = false
+                            answer = .no
+                            isFocused = false
+                            isEnabled = false
+                            onAllowedToContinue(false, "")
+                        }
                     }
                     
                     Spacer()
                 }
-                .frame(maxHeight: 100.0)
+                .frame(maxHeight: 73.0)
                 .padding(.top, 169.0)
                 
                 Spacer()
                 
                 if isYesSelected {
-                    LargeTextInputView(explanationPlaceholderText, text: $explanation, minLineCount: 3) {
-                        if !explanation.isEmpty {
-                            onAllowedToContinue()
+                    LargeTextInputView(explanationPlaceholderText, text: $explanation, minLineCount: 2, maxLineCount: 2) {
+                        if !explanation.isEmpty && isEnabled {
+                            onAllowedToContinue(true, explanation)
+                            isFocused = false
+                            isEnabled = false
                         }
                     }
                         .font(.title2)
-                        .foregroundColor(.blue)
                         .padding()
+                        .focused($isFocused)
                 }
             }
             .padding()
@@ -95,28 +118,5 @@ struct QuestionView: View {
             isYesSelected = answer == .yes
             isNoSelected = answer == .no
         }
-    }
-}
-
-
-
-struct QuestionView_Previews: PreviewProvider {
-    
-    @State static var answer = NMAnswer.none
-    @State static var explanation = ""
-    
-    static var previews: some View {
-        VStack {
-            QuestionView(answer: $answer,
-                           explanation: $explanation,
-                           index: 12,
-                           question: "Da li ste bolovali ili bolujete od neke bolesti zavisnosti (alkoholizam, toksikomanija, zloupotreba psihotropnih supstanci)?",
-                           onAllowedToContinue: {})
-//            .offset(x: 50.0, y: -70.0)
-//            .rotationEffect(Angle(degrees: 10.0))
-            Spacer()
-        }
-        .padding(50.0)
-        .background(Color.nmBackground)
     }
 }

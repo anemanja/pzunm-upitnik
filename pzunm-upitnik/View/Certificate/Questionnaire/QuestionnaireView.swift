@@ -9,35 +9,33 @@ import SwiftUI
 import PencilKit
 
 struct QuestionnaireView: View {
-    @EnvironmentObject var coordinatorViewModel: CoordinatorViewModel
-    @EnvironmentObject var viewModel: QuestionnaireViewModel
+    @EnvironmentObject private var coordinatorViewModel: CoordinatorViewModel
+    @ObservedObject private var viewModel: QuestionnaireViewModel
     
-    @State var certificate: NMCertificate
-    @State var canvasView = PKCanvasView()
-    @State var shouldDisableScrolling = false
-    @State var shouldShowButtons = false
-    @State var offsetIteration: CGFloat = 0.0
-    @State var currentExplanation = ""
+    @State private var certificate: NMCertificate
+    @State private var canvasView = PKCanvasView()
+    @State private var shouldDisableScrolling = false
+    @State private var shouldShowButtons = false
+    @State private var offsetIteration: CGFloat = 0.0
+    @State private var currentExplanation = ""
+
+    init(viewModel: QuestionnaireViewModel, certificate: NMCertificate, canvasView: PKCanvasView = PKCanvasView(), shouldShowButtons: Bool = false, offsetIteration: CGFloat = 0.0, currentExplanation: String = "") {
+        self.viewModel = viewModel
+        self.certificate = certificate
+        self.canvasView = canvasView
+        self.offsetIteration = offsetIteration
+        self.currentExplanation = currentExplanation
+    }
 
     var body: some View {
         LoadingView(source: viewModel) {
             Color.nmBackground
-                .onAppear {
-                    viewModel.fillQuestionnaire(for: certificate.language)
-                }
         } loader: { _ in
             ProgressView()
         } error: { error in
-            // TODO: Extract to a separate view. CertificatesView will also use it
-            VStack {
-                Image(systemName: "exclamationmark.triangle")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxHeight: 50.0)
-                Text(error.description)
-                    .padding()
+            ErrorView(error) {
+                viewModel.fillQuestionnaire(for: certificate.language)
             }
-            .foregroundColor(.nmError)
         } content: { localization in
             VStack {
 
@@ -50,28 +48,16 @@ struct QuestionnaireView: View {
                 GeometryReader { gp in
                     HStack (alignment: .top, spacing: 0) {
 
-                        VStack {
-                            CardView { _ in
-                                Text(localization.introduction)
-                                    .font(.title)
-                                    .padding(.horizontal, 50.0)
-                                    .foregroundColor(.nmTitle)
-                                    .multilineTextAlignment(.center)
-                            }
-
-                            Button(localization.confirm) {
-                                nextQuestion()
-                            }
-                            .buttonStyle(.borderedProminent)
-                            .accentColor(.nmTitle)
-                        }
+                        IntroductionView(introduction: localization.introduction, confirm: localization.confirm, nextAction: {
+                            nextQuestion()
+                        }, skipAction: {
+                            skipQuestions()
+                        })
                         .padding()
                         .frame(width: gp.size.width)
 
-                        ForEach($viewModel.questions, id: \.hashValue) { $question in
-                            QuestionView(answer: $question.answer,
-                                         explanation: $currentExplanation,
-                                         index: question.id,
+                        ForEach(localization.questions, id: \.index) { question in
+                            QuestionView(index: question.index,
                                          question: question.formulation,
                                          yesLabelText: localization.yes,
                                          noLabelText: localization.no,
@@ -81,37 +67,11 @@ struct QuestionnaireView: View {
                             .frame(width: gp.size.width)
                         }
 
-                        ZStack (alignment: .top) {
-                            CardView { _ in
-                                VStack{
-                                    SectionHeaderView(text: localization.signature)
-                                        .foregroundColor(.nmPrimary)
-                                    CanvasView(canvasView: $canvasView, onSaved: onSaved, onBegan: onBegan, onEnded: onEnded)
-                                        .border(Color.nmBackground)
-                                    Text(certificate.ime + " " + certificate.prezime)
-                                        .font(.title2)
-                                        .padding()
-                                }
-                                .padding()
-                            }
-                            .padding(.bottom, 50.0)
-                            .frame(maxHeight: 300.0)
-
-                            VStack {
-                                Spacer()
-
-                                HStack {
-                                    if shouldShowButtons {
-                                        Button(localization.eraseSignature, action: deleteDrawing)
-                                            .buttonStyle(.bordered)
-                                            .accentColor(.nmTitle)
-                                        Button(localization.confirm, action: done)
-                                            .buttonStyle(.borderedProminent)
-                                            .accentColor(.nmTitle)
-                                    }
-                                }
-                            }
-                        }
+                        SignatureView(signature: localization.signature,
+                                      name: certificate.name, surname: certificate.surname,
+                                      eraseSignature: localization.eraseSignature,
+                                      confirm: localization.confirm,
+                                      done: done(with:))
                         .padding()
                         .frame(width: gp.size.width)
                     }
@@ -137,20 +97,29 @@ struct QuestionnaireView: View {
             }
             .padding(37.1)
             .background(Color.nmBackground)
-            .onAppear {
-                viewModel.fillQuestionnaire(for: .srb)
-            }
+        }
+        .onAppear {
+            viewModel.fillQuestionnaire(for: certificate.language)
         }
     }
     
     // MARK: Questions
     
-    func nextQuestion() {
-        viewModel.confirmCurrent(explanation: currentExplanation)
+    func nextQuestion(answer: Bool? = nil, explanation: String? = nil) {
+        if let explanation = explanation, let answer = answer {
+            viewModel.confirmCurrent(answer: answer, explanation: explanation)
+        }
         viewModel.cycleToNextQuestion()
         currentExplanation = ""
         withAnimation {
             offsetIteration += 1.0
+        }
+    }
+
+    func skipQuestions() {
+        let skippedQuestionsCount = viewModel.skipAllQuestions()
+        withAnimation {
+            offsetIteration += 1.0 * CGFloat(skippedQuestionsCount)
         }
     }
     
@@ -160,35 +129,15 @@ struct QuestionnaireView: View {
         shouldShowButtons = true
     }
     
-    func onBegan() {
-        shouldDisableScrolling = true
-    }
-    
-    func onEnded() {
-        shouldDisableScrolling = false
-    }
-    
     func deleteDrawing() {
         shouldShowButtons = false
         canvasView.drawing = PKDrawing()
     }
     
-    func done() {
-        coordinatorViewModel.cover(with: NMQuestionnairePreview(certificateId: certificate.idString(),
-                                                                title: viewModel.title,
-                                                                introduction: viewModel.introduction,
-                                                                questions: viewModel.questions,
-                                                                signatureView: Image(uiImage: canvasView.drawing.image(from: canvasView.bounds, scale: 1.0))))
-    }
-}
-
-struct QuestionnaireView_Previews: PreviewProvider {
-    static var previews: some View {
-        QuestionnaireView(certificate: NMCertificate(id: "001037",
-                                         ime: "Nemanja", prezime: "Avramović",
-                                         language: nil,
-                                         hasCompletedQuestionnaire: false))
-        .environmentObject(QuestionnaireViewModel(pdfService: NMPDFServiceImplementation(repository: MockRepositoryModule().pdf), localizationService: LocalizationService(localizationRepository: MockLocalizationRepository())))
-        .environmentObject(CoordinatorViewModel())
+    func done(with signatureImage: Image) {
+        if let preview = viewModel.questionnairePreview(for: certificate.idString(),
+                                                        with: signatureImage) {
+            coordinatorViewModel.cover(with: preview)
+        }
     }
 }

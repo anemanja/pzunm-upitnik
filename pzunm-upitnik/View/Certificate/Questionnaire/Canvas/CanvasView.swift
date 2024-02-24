@@ -9,15 +9,18 @@ import SwiftUI
 import PencilKit
 
 struct CanvasView {
-    @Binding var canvasView: PKCanvasView
-    let onSaved: () -> Void
-    let onBegan: () -> Void
-    let onEnded: () -> Void
+    @Binding private var canvasView: PKCanvasView
+    private let onSaved: () -> Void
+
+    init(canvasView: Binding<PKCanvasView>, onSaved: @escaping () -> Void) {
+        self._canvasView = canvasView
+        self.onSaved = onSaved
+    }
 }
 
 extension CanvasView: UIViewRepresentable {
     func makeUIView(context: Context) -> PKCanvasView {
-        canvasView.tool = PKInkingTool(.pen, color: .blue, width: 10)
+        canvasView.tool = PKInkingTool(.pen, color: .blue, width: 3)
 #if targetEnvironment(simulator)
         canvasView.drawingPolicy = .anyInput
 #endif
@@ -28,6 +31,6 @@ extension CanvasView: UIViewRepresentable {
     func updateUIView(_ uiView: PKCanvasView, context: Context) {}
     
     func makeCoordinator() -> CanvasCoordinator {
-        CanvasCoordinator(canvasView: $canvasView, onSaved: onSaved, onBegan: onBegan, onEnded: onEnded)
+        CanvasCoordinator(canvasView: $canvasView, onSaved: onSaved)
     }
 }

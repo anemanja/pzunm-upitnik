@@ -35,7 +35,7 @@ public final class MockAuthenticationRepository: AuthenticationRepositoryProtoco
 }
 
 public final class MockPDFRepository: PDFRepositoryProtocol {
-    public func uploadPDF(at path: URL, for clientId: String) async -> Result<Void, GenericError> {
+    public func uploadPDF(at path: URL, for certificateId: String) async -> Result<Void, GenericError> {
         .success(())
     }
 }
@@ -51,15 +51,18 @@ public class MockRepositoryModule {
     public let certificates: any CertificatesRepositoryProtocol
     public let pdf: any PDFRepositoryProtocol
     public let localization: any LocalizationRepositoryProtocol
+    public let questionnaireStatus: any QuestionnaireStatusRepositoryProtocol
 
     init(authentication: any AuthenticationRepositoryProtocol = MockAuthenticationRepository(),
          certificates: any CertificatesRepositoryProtocol = MockClientsRepository(),
          pdf: any PDFRepositoryProtocol = MockPDFRepository(),
-         localization: any LocalizationRepositoryProtocol = MockLocalizationRepository()
+         localization: any LocalizationRepositoryProtocol = MockLocalizationRepository(),
+         questionnaireStatus: any QuestionnaireStatusRepositoryProtocol = QuestionnaireStatusRepository()
     ) {
         self.authentication = authentication
         self.certificates = certificates
         self.pdf = pdf
         self.localization = localization
+        self.questionnaireStatus = questionnaireStatus
     }
 }

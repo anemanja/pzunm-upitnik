@@ -13,5 +13,21 @@ struct NMQuestionnairePreview {
     let title: String
     let introduction: String
     let questions: [NMQuestion]
+    let yesLabel: String
+    let noLabel: String
+    let submitLabel: String
     let signatureView: Image
+}
+
+extension NMLocalization {
+    func preview(for certificateId: String, with questions: [NMQuestion], and signatureView: Image) -> NMQuestionnairePreview {
+        NMQuestionnairePreview(certificateId: certificateId,
+                               title: title,
+                               introduction: introduction,
+                               questions: questions,
+                               yesLabel: yes,
+                               noLabel: no,
+                               submitLabel: submit,
+                               signatureView: signatureView)
+    }
 }
