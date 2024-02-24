@@ -28,8 +28,8 @@ public final class CertificatesService: CertificatesServiceProtocol {
             let questionnaireStatuses = questionnaireRepository.getQuestionnaireStatus(for: certificates.map { $0.id })
             certificates = certificates.map {
                 NMCertificate(id: $0.id,
-                              ime: $0.name,
-                              prezime: $0.surname,
+                              name: $0.name,
+                              surname: $0.surname,
                               language: $0.language,
                               hasCompletedQuestionnaire: questionnaireStatuses[$0.id] ?? false,
                               type: $0.type)
