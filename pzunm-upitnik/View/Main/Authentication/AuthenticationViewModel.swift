@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import NMModel
+import NMServices
 
 final class AuthenticationViewModel: LoadingObject {
     @Published private(set) var state = LoadingState<NMUser>.idle

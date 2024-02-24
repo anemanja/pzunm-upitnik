@@ -7,11 +7,19 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct MainView<Certificates: View, Authentication: View>: View {
     @EnvironmentObject private var coordinatorViewModel: CoordinatorViewModel
-    
-    @State var isAuthenticated = false
-    
+    @State private var isAuthenticated = false
+
+    private var certificatesView: (Binding<Bool>) -> Certificates
+    private var authenticationView: (Binding<Bool>) -> Authentication
+
+    init(@ViewBuilder certificatesView: @escaping (Binding<Bool>) -> Certificates,
+         @ViewBuilder authenticationView: @escaping (Binding<Bool>) -> Authentication) {
+        self.certificatesView = certificatesView
+        self.authenticationView = authenticationView
+    }
+
     var body: some View {
         ZStack {
             VStack {
@@ -25,14 +33,14 @@ struct MainView: View {
                     .dynamicTypeSize(.xxxLarge)
                 Spacer()
                 CardView { _ in
-                    CertificatesView(viewModel: coordinatorViewModel.dependencyContainer.certificatesViewModel, shouldShowAll: $isAuthenticated)
+                    certificatesView($isAuthenticated)
                 }
                 .padding()
                 Spacer()
             }
             .background(Color.nmBackground)
             VStack {
-                AuthenticationView(viewModel: coordinatorViewModel.dependencyContainer.authenticationViewModel, isAuthenticated: $isAuthenticated)
+                authenticationView($isAuthenticated)
                 Spacer()
             }
         }

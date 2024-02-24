@@ -6,18 +6,16 @@
 //
 
 import Foundation
+import NMModel
 import SwiftUI
 
 final class CoordinatorViewModel: ObservableObject {
     @Published var path = NavigationPath()
     @Published var shouldCover = false
 
-    var dependencyContainer: DependencyContainer
-
-    init(path: NavigationPath = NavigationPath(), shouldCover: Bool = false, dependencyContainer: DependencyContainer) {
+    init(path: NavigationPath = NavigationPath(), shouldCover: Bool = false) {
         self.path = path
         self.shouldCover = shouldCover
-        self.dependencyContainer = dependencyContainer
     }
     
     var questionnairePreviewCoverData: NMQuestionnairePreview?
@@ -30,8 +28,13 @@ final class CoordinatorViewModel: ObservableObject {
         shouldCover = true
         questionnairePreviewCoverData = questionnairePreviewData
     }
+
+    func dismissCover() {
+        shouldCover = false
+    }
     
     func popToRoot() {
+        shouldCover = false
         path.removeLast(path.count)
     }
 }

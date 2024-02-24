@@ -25,8 +25,7 @@ struct CertificatesView: View {
             .buttonStyle(.borderedProminent)
             .accentColor(.nmTitle)
         } loader: { _ in
-            ProgressView()
-                .foregroundColor(.nmPrimary)
+            NMProgressView()
         } error: { error in
             ErrorView(error) {
                 viewModel.load(includingCompleted: shouldShowAll)

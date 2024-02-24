@@ -6,28 +6,39 @@
 //
 
 import SwiftUI
+import NMModel
 
 struct CoordinatorView: View {
-    @EnvironmentObject var viewModel: CoordinatorViewModel
+    @EnvironmentObject private var viewModel: CoordinatorViewModel
+    private var dependencyContainer: DependencyContainer
+
+    init(dependencyContainer: DependencyContainer) {
+        self.dependencyContainer = dependencyContainer
+    }
     
     var body: some View {
         NavigationStack(path: $viewModel.path) {
-            MainView()
+            MainView() { isAuthenticated in
+                CertificatesView(viewModel: dependencyContainer.certificatesViewModel,
+                                 shouldShowAll: isAuthenticated)
+            } authenticationView: { isAuthenticated in
+                AuthenticationView(viewModel: dependencyContainer.authenticationViewModel,
+                                   isAuthenticated: isAuthenticated)
+            }
                 .navigationDestination(for: NMCertificate.self) { certificate in
                     if certificate.language == nil {
                         LanguagesView(certificate: certificate)
                     } else {
-                        QuestionnaireView(viewModel: viewModel.dependencyContainer.questionnaireViewModel,
+                        QuestionnaireView(viewModel: dependencyContainer.questionnaireViewModel,
                                           certificate: certificate)
                     }
                 }
         }
         .fullScreenCover(isPresented: $viewModel.shouldCover) {
             if let coverData = viewModel.questionnairePreviewCoverData {
-                PDFSubmitView(viewModel: viewModel.dependencyContainer.pdfSubmitViewModel, submitLabel: coverData.submitLabel, certificateId: coverData.certificateId) {
+                PDFSubmitView(viewModel: dependencyContainer.pdfSubmitViewModel, submitLabel: coverData.submitLabel, cancelLabel: coverData.cancelLabel, certificateId: coverData.certificateId) {
                     QuestionnairePreviewView(questionnairePreview: coverData)
                 }
-//                    .interactiveDismissDisabled()
             } else {
                 Text("Invalid view data.")
             }

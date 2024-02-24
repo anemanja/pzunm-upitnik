@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import NMServices
+import NMModel
 
 class QuestionnaireViewModel: LoadingObject {
     @Published private(set) var state = LoadingState<NMLocalization>.idle
@@ -25,8 +27,7 @@ class QuestionnaireViewModel: LoadingObject {
         guard let language = language else { return }
 
         state = .loading(0.0)
-        let localizationRepository = LocalizationRepository()
-        let result = localizationRepository.localization(for: language)
+        let result = localizationService.localization(for: language)
         switch result {
         case .success(let localization):
             questions = localization.questions.map { $0.toQuestion()}

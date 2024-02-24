@@ -6,21 +6,8 @@
 //
 
 import Foundation
-import Networking
-
-//    .environmentObject(CoordinatorViewModel())
-//    .environmentObject(AuthenticationViewModel(
-//        authenticationService: services.authentication
-//    ))
-//    .environmentObject(CertificatesViewModel(
-//        certificatesService: services.certificates
-//    ))
-//    .environmentObject(QuestionnaireViewModel(
-//        localizationService: services.localization
-//    ))
-//    .environmentObject(PDFSubmitViewModel(
-//        pdfService: services.pdf
-//    ))
+import NMServices
+import NMRepository
 
 struct DependencyContainer {
     let authenticationViewModel: AuthenticationViewModel
@@ -35,7 +22,7 @@ protocol DependencyAssemblerProtocol {
 
 class DependencyAssembler: DependencyAssemblerProtocol {
     func assemble() -> DependencyContainer {
-        let apiClient = APIClient<Endpoint>(dataParser: DataParser.json, responseParser: ResponseParser(), requestBuilder: NMRequestBuilder())
+        let apiClient = NMAPIClientWrapper()
         let questionnaireStatusRepository = QuestionnaireStatusRepository()
 
         return DependencyContainer(authenticationViewModel: authentication(),
@@ -44,17 +31,15 @@ class DependencyAssembler: DependencyAssemblerProtocol {
                                    pdfSubmitViewModel: pdfSubmit(with: apiClient, questionnaireStatusRepository: questionnaireStatusRepository))
     }
 
-
-
     private func authentication() -> AuthenticationViewModel {
-        let authenticationRepository = MockAuthenticationRepository()
+        let authenticationRepository = AuthenticationRepository()
         let authenticationService = AuthenticationService(repository: authenticationRepository)
         return AuthenticationViewModel(authenticationService: authenticationService)
     }
 
-    private func certificates(with apiClient: APIClient<Endpoint>, questionnaireStatusRepository: any QuestionnaireStatusRepositoryProtocol) -> CertificatesViewModel {
-        let certificatesRepository = CertificatesRepository(apiClient: apiClient)
-        let certificatesService = CertificatesService(repository: MockClientsRepository(), questionnaireRepository: questionnaireStatusRepository)
+    private func certificates(with apiClient: NMAPIClientWrapper, questionnaireStatusRepository: any QuestionnaireStatusRepositoryProtocol) -> CertificatesViewModel {
+        let certificatesRepository = CertificatesRepository(apiClientWrapper: apiClient)
+        let certificatesService = CertificatesService(repository: certificatesRepository, questionnaireRepository: questionnaireStatusRepository)
         return CertificatesViewModel(certificatesService: certificatesService)
     }
 
@@ -64,8 +49,8 @@ class DependencyAssembler: DependencyAssemblerProtocol {
         return QuestionnaireViewModel(localizationService: localizationService)
     }
 
-    private func pdfSubmit(with apiClient: APIClient<Endpoint>, questionnaireStatusRepository: any QuestionnaireStatusRepositoryProtocol) -> PDFSubmitViewModel {
-        let pdfRepository = PDFRepository(apiClient: apiClient)
+    private func pdfSubmit(with apiClient: NMAPIClientWrapper, questionnaireStatusRepository: any QuestionnaireStatusRepositoryProtocol) -> PDFSubmitViewModel {
+        let pdfRepository = PDFRepository(apiClientWrapper: apiClient)
         let pdfService = PDFService(repository: pdfRepository, questionnaireRepository: questionnaireStatusRepository)
         return PDFSubmitViewModel(pdfService: pdfService)
     }

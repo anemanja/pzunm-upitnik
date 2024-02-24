@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+import NMModel
 
 struct LanguagesView: View {
-    @EnvironmentObject var coordinatorViewModel: CoordinatorViewModel
-    @State var certificate: NMCertificate
+    @EnvironmentObject private var coordinatorViewModel: CoordinatorViewModel
+    @State private var certificate: NMCertificate
+
+    init(certificate: NMCertificate) {
+        self.certificate = certificate
+    }
     
     var body: some View {
         ZStack {

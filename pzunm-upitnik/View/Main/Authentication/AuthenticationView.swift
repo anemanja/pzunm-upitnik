@@ -31,7 +31,7 @@ struct AuthenticationView: View {
                         .buttonStyle(.borderedProminent)
                         .accentColor(.nmTitle)
                 } loader: { progress in
-                    ProgressView()
+                    NMProgressView()
                 } error: { error in
                     HStack {
                         Image(systemName: "exclamationmark.triangle")

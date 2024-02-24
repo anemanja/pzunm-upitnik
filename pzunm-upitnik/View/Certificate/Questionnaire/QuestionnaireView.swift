@@ -7,22 +7,21 @@
 
 import SwiftUI
 import PencilKit
+import NMModel
 
 struct QuestionnaireView: View {
     @EnvironmentObject private var coordinatorViewModel: CoordinatorViewModel
     @ObservedObject private var viewModel: QuestionnaireViewModel
     
     @State private var certificate: NMCertificate
-    @State private var canvasView = PKCanvasView()
     @State private var shouldDisableScrolling = false
     @State private var shouldShowButtons = false
     @State private var offsetIteration: CGFloat = 0.0
     @State private var currentExplanation = ""
 
-    init(viewModel: QuestionnaireViewModel, certificate: NMCertificate, canvasView: PKCanvasView = PKCanvasView(), shouldShowButtons: Bool = false, offsetIteration: CGFloat = 0.0, currentExplanation: String = "") {
+    init(viewModel: QuestionnaireViewModel, certificate: NMCertificate, shouldShowButtons: Bool = false, offsetIteration: CGFloat = 0.0, currentExplanation: String = "") {
         self.viewModel = viewModel
         self.certificate = certificate
-        self.canvasView = canvasView
         self.offsetIteration = offsetIteration
         self.currentExplanation = currentExplanation
     }
@@ -31,7 +30,7 @@ struct QuestionnaireView: View {
         LoadingView(source: viewModel) {
             Color.nmBackground
         } loader: { _ in
-            ProgressView()
+            NMProgressView()
         } error: { error in
             ErrorView(error) {
                 viewModel.fillQuestionnaire(for: certificate.language)
@@ -121,17 +120,6 @@ struct QuestionnaireView: View {
         withAnimation {
             offsetIteration += 1.0 * CGFloat(skippedQuestionsCount)
         }
-    }
-    
-    // MARK: Canvas
-    
-    func onSaved() {
-        shouldShowButtons = true
-    }
-    
-    func deleteDrawing() {
-        shouldShowButtons = false
-        canvasView.drawing = PKDrawing()
     }
     
     func done(with signatureImage: Image) {

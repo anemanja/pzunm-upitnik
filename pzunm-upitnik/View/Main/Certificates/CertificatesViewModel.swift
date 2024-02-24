@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import NMModel
+import NMServices
 
 final class CertificatesViewModel: LoadingObject {
     @Published private(set) var state = LoadingState<[NMCertificate]>.idle
