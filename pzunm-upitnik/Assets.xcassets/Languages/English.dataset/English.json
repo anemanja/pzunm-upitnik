@@ -1,0 +1,29 @@
+{
+    "language": "English",
+    "introduction": "Dear applicant, this questionnaire gives us insight into your previous health condition. Please read it carefully and answer honestly by selecting the right answer. If the answer is positive, explain in more detail on the line below. You guarantee your credibility with your signature at the end.",
+    "title": "MEDICAL CERTIFICATE QUESTIONNAIRE",
+    "questions": [
+        {"index": 1, "formulation": "Have you ever had any natural or acquired illness of sight organs (eyes)?"},
+        {"index": 2, "formulation": "Have you ever had any congenital defect or acquired illness of hearing organs (ears) or balance?"},
+        {"index": 3, "formulation": "Do you suffer from any mental illness?"},
+        {"index": 4, "formulation": "Have you ever suffered or do you suffer from addiction problems? (alcoholism, toxicomania, substance abuse)"},
+        {"index": 5, "formulation": "Do you suffer from epilepsy or other mental breakdown?"},
+        {"index": 6, "formulation": "Have you ever been prone to inappropriate behavior? (breaking the law or antisocial or emotional instability)"},
+        {"index": 7, "formulation": "Do you suffer from some of the following diseases: multiple sclerosis, Parkinson's disease?"},
+        {"index": 8, "formulation": "Have you ever had heart problems or illness of blood vessels?"},
+        {"index": 9, "formulation": "Have you ever been ill or suffered from respiratory organ disease?"},
+        {"index": 10, "formulation": "Do you suffer from sugar disease (high level of blood sugar)?"},
+        {"index": 11, "formulation": "Have you ever been clinically treated?"},
+        {"index": 12, "formulation": "Have you ever had any surgical operation?"},
+        {"index": 13, "formulation": "Do you take any medications from time to time or regularly?"}
+    ],
+    "signature": "Signature",
+    "yes": "YES",
+    "no": "NO",
+    "confirm": "Confirm",
+    "eraseSignature": "Erase Signature",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "explanation": "Explanation"
+}
+

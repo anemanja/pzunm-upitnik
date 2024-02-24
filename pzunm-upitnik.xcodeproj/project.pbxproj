@@ -1,0 +1,950 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF2C7E842B62A74A006B94A6 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C7E832B62A74A006B94A6 /* CanvasView.swift */; };
+		EF2C7E872B62BDC9006B94A6 /* CanvasCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C7E862B62BDC9006B94A6 /* CanvasCoordinator.swift */; };
+		EF2C7E8E2B62D0E1006B94A6 /* QuestionnairePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C7E8D2B62D0E1006B94A6 /* QuestionnairePreviewView.swift */; };
+		EF2C7E902B62D936006B94A6 /* QuestionPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2C7E8F2B62D936006B94A6 /* QuestionPreviewView.swift */; };
+		EF3379A42B80DB9A00B5E9ED /* QuestionPreviewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3379A32B80DB9A00B5E9ED /* QuestionPreviewButton.swift */; };
+		EF3379A62B80F51D00B5E9ED /* PDFSubmitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3379A52B80F51D00B5E9ED /* PDFSubmitView.swift */; };
+		EF4FAD742B85FA7C00257A8A /* Bundle+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD732B85FA7C00257A8A /* Bundle+Version.swift */; };
+		EF4FAD8C2B88468000257A8A /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD8B2B88468000257A8A /* ErrorView.swift */; };
+		EF4FAD8E2B8852ED00257A8A /* PDFSubmitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD8D2B8852ED00257A8A /* PDFSubmitViewModel.swift */; };
+		EF4FAD902B885B9400257A8A /* DependencyAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD8F2B885B9400257A8A /* DependencyAssembler.swift */; };
+		EF4FAD922B891A2900257A8A /* IntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD912B891A2900257A8A /* IntroductionView.swift */; };
+		EF4FAD942B891C6F00257A8A /* SignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD932B891C6F00257A8A /* SignatureView.swift */; };
+		EF4FAD9C2B8A276600257A8A /* NMProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4FAD9B2B8A276600257A8A /* NMProgressView.swift */; };
+		EF4FADA82B8A45DC00257A8A /* NMModel in Frameworks */ = {isa = PBXBuildFile; productRef = EF4FADA72B8A45DC00257A8A /* NMModel */; };
+		EF4FADAA2B8A45DC00257A8A /* NMRepository in Frameworks */ = {isa = PBXBuildFile; productRef = EF4FADA92B8A45DC00257A8A /* NMRepository */; };
+		EF4FADAC2B8A45DC00257A8A /* NMServices in Frameworks */ = {isa = PBXBuildFile; productRef = EF4FADAB2B8A45DC00257A8A /* NMServices */; };
+		EF51A26E2B73CCB100537099 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51A26D2B73CCB100537099 /* CardView.swift */; };
+		EF51D6132AF0FA7C0081CD36 /* QuestionnaireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51D6122AF0FA7C0081CD36 /* QuestionnaireApp.swift */; };
+		EF51D6172AF0FA7F0081CD36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF51D6162AF0FA7F0081CD36 /* Assets.xcassets */; };
+		EF51D61A2AF0FA7F0081CD36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF51D6192AF0FA7F0081CD36 /* Preview Assets.xcassets */; };
+		EF51D6252AF0FA7F0081CD36 /* pzunm_upitnikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51D6242AF0FA7F0081CD36 /* pzunm_upitnikTests.swift */; };
+		EF51D62F2AF0FA7F0081CD36 /* pzunm_upitnikUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51D62E2AF0FA7F0081CD36 /* pzunm_upitnikUITests.swift */; };
+		EF51D6312AF0FA7F0081CD36 /* pzunm_upitnikUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51D6302AF0FA7F0081CD36 /* pzunm_upitnikUITestsLaunchTests.swift */; };
+		EF51D63F2AF0FBDE0081CD36 /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF51D63E2AF0FBDE0081CD36 /* PDFKit.framework */; };
+		EF51D6412AF0FC0D0081CD36 /* PencilKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF51D6402AF0FC0D0081CD36 /* PencilKit.framework */; };
+		EF8DA5962B5F296600738D84 /* CertificateListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8DA5952B5F296600738D84 /* CertificateListItemView.swift */; };
+		EFB1E19F2B6D7D24008C1B77 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB1E19E2B6D7D24008C1B77 /* SectionHeaderView.swift */; };
+		EFB1E1A12B6D9689008C1B77 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB1E1A02B6D9689008C1B77 /* ToggleView.swift */; };
+		EFC9335F2B6953A300DB3BB1 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9335E2B6953A300DB3BB1 /* LoadingState.swift */; };
+		EFC933612B6953E600DB3BB1 /* LoadingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC933602B6953E600DB3BB1 /* LoadingObject.swift */; };
+		EFC933642B69555A00DB3BB1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC933632B69555A00DB3BB1 /* LoadingView.swift */; };
+		EFC933662B69822700DB3BB1 /* CertificatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC933652B69822700DB3BB1 /* CertificatesViewModel.swift */; };
+		EFC933682B69823D00DB3BB1 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC933672B69823D00DB3BB1 /* AuthenticationView.swift */; };
+		EFDFC1D62B6A711800FE44B9 /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDFC1D52B6A711800FE44B9 /* Color+Custom.swift */; };
+		EFE1D5532B5821B5008AAEDD /* QuestionnaireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5522B5821B5008AAEDD /* QuestionnaireViewModel.swift */; };
+		EFE1D5552B588546008AAEDD /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5542B588545008AAEDD /* QuestionView.swift */; };
+		EFE1D5572B59A56C008AAEDD /* QuestionnaireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5562B59A56C008AAEDD /* QuestionnaireView.swift */; };
+		EFE1D55D2B5A9EDF008AAEDD /* LanguagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D55C2B5A9EDF008AAEDD /* LanguagesView.swift */; };
+		EFE1D55F2B5A9EEC008AAEDD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D55E2B5A9EEC008AAEDD /* MainView.swift */; };
+		EFE1D57F2B5AB774008AAEDD /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D57E2B5AB774008AAEDD /* AuthenticationViewModel.swift */; };
+		EFE1D5822B5B1831008AAEDD /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5812B5B1831008AAEDD /* CoordinatorView.swift */; };
+		EFE1D5852B5B25F6008AAEDD /* CoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D5842B5B25F6008AAEDD /* CoordinatorViewModel.swift */; };
+		EFEB776A2B69A2C4004FA9A8 /* CertificatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEB77692B69A2C4004FA9A8 /* CertificatesView.swift */; };
+		EFEB776C2B69A3AF004FA9A8 /* TextInputViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEB776B2B69A3AF004FA9A8 /* TextInputViews.swift */; };
+		EFFB1D1A2B6C467500E25C89 /* QuestionnaireButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB1D192B6C467500E25C89 /* QuestionnaireButton.swift */; };
+		EFFE51FE2B8A5500008856A1 /* GenericNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = EFFE51FD2B8A5500008856A1 /* GenericNetworking */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF51D6212AF0FA7F0081CD36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF51D6072AF0FA7C0081CD36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF51D60E2AF0FA7C0081CD36;
+			remoteInfo = "pzunm-upitnik";
+		};
+		EF51D62B2AF0FA7F0081CD36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF51D6072AF0FA7C0081CD36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF51D60E2AF0FA7C0081CD36;
+			remoteInfo = "pzunm-upitnik";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF2C7E832B62A74A006B94A6 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		EF2C7E862B62BDC9006B94A6 /* CanvasCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasCoordinator.swift; sourceTree = "<group>"; };
+		EF2C7E8D2B62D0E1006B94A6 /* QuestionnairePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnairePreviewView.swift; sourceTree = "<group>"; };
+		EF2C7E8F2B62D936006B94A6 /* QuestionPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPreviewView.swift; sourceTree = "<group>"; };
+		EF3379A32B80DB9A00B5E9ED /* QuestionPreviewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPreviewButton.swift; sourceTree = "<group>"; };
+		EF3379A52B80F51D00B5E9ED /* PDFSubmitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFSubmitView.swift; sourceTree = "<group>"; };
+		EF4FAD732B85FA7C00257A8A /* Bundle+Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Version.swift"; sourceTree = "<group>"; };
+		EF4FAD8B2B88468000257A8A /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		EF4FAD8D2B8852ED00257A8A /* PDFSubmitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFSubmitViewModel.swift; sourceTree = "<group>"; };
+		EF4FAD8F2B885B9400257A8A /* DependencyAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyAssembler.swift; sourceTree = "<group>"; };
+		EF4FAD912B891A2900257A8A /* IntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionView.swift; sourceTree = "<group>"; };
+		EF4FAD932B891C6F00257A8A /* SignatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureView.swift; sourceTree = "<group>"; };
+		EF4FAD9B2B8A276600257A8A /* NMProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMProgressView.swift; sourceTree = "<group>"; };
+		EF4FADA32B8A41BB00257A8A /* NMRepository */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NMRepository; path = "pzunm-upitnik/NMRepository"; sourceTree = "<group>"; };
+		EF4FADA42B8A42EE00257A8A /* NMServices */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NMServices; path = "pzunm-upitnik/NMServices"; sourceTree = "<group>"; };
+		EF4FADA62B8A432D00257A8A /* NMModel */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NMModel; path = "pzunm-upitnik/NMModel"; sourceTree = "<group>"; };
+		EF51A26D2B73CCB100537099 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		EF51D60F2AF0FA7C0081CD36 /* pzunm-upitnik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pzunm-upitnik.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF51D6122AF0FA7C0081CD36 /* QuestionnaireApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireApp.swift; sourceTree = "<group>"; };
+		EF51D6162AF0FA7F0081CD36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF51D6192AF0FA7F0081CD36 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF51D61B2AF0FA7F0081CD36 /* pzunm_upitnik.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pzunm_upitnik.entitlements; sourceTree = "<group>"; };
+		EF51D6202AF0FA7F0081CD36 /* pzunm-upitnikTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pzunm-upitnikTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF51D6242AF0FA7F0081CD36 /* pzunm_upitnikTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pzunm_upitnikTests.swift; sourceTree = "<group>"; };
+		EF51D62A2AF0FA7F0081CD36 /* pzunm-upitnikUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pzunm-upitnikUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF51D62E2AF0FA7F0081CD36 /* pzunm_upitnikUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pzunm_upitnikUITests.swift; sourceTree = "<group>"; };
+		EF51D6302AF0FA7F0081CD36 /* pzunm_upitnikUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pzunm_upitnikUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EF51D63E2AF0FBDE0081CD36 /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/PDFKit.framework; sourceTree = DEVELOPER_DIR; };
+		EF51D6402AF0FC0D0081CD36 /* PencilKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PencilKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/PencilKit.framework; sourceTree = DEVELOPER_DIR; };
+		EF8DA5952B5F296600738D84 /* CertificateListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateListItemView.swift; sourceTree = "<group>"; };
+		EFB1E19E2B6D7D24008C1B77 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		EFB1E1A02B6D9689008C1B77 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
+		EFC9335E2B6953A300DB3BB1 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		EFC933602B6953E600DB3BB1 /* LoadingObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingObject.swift; sourceTree = "<group>"; };
+		EFC933632B69555A00DB3BB1 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		EFC933652B69822700DB3BB1 /* CertificatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatesViewModel.swift; sourceTree = "<group>"; };
+		EFC933672B69823D00DB3BB1 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		EFDFC1D52B6A711800FE44B9 /* Color+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Custom.swift"; sourceTree = "<group>"; };
+		EFE1D5522B5821B5008AAEDD /* QuestionnaireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireViewModel.swift; sourceTree = "<group>"; };
+		EFE1D5542B588545008AAEDD /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		EFE1D5562B59A56C008AAEDD /* QuestionnaireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireView.swift; sourceTree = "<group>"; };
+		EFE1D55C2B5A9EDF008AAEDD /* LanguagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesView.swift; sourceTree = "<group>"; };
+		EFE1D55E2B5A9EEC008AAEDD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		EFE1D57E2B5AB774008AAEDD /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		EFE1D5812B5B1831008AAEDD /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		EFE1D5842B5B25F6008AAEDD /* CoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorViewModel.swift; sourceTree = "<group>"; };
+		EFE1D5862B5EAD96008AAEDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EFE580D12B8A5344004D5B33 /* GenericNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = GenericNetworking; path = "pzunm-upitnik/GenericNetworking"; sourceTree = "<group>"; };
+		EFEB77692B69A2C4004FA9A8 /* CertificatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatesView.swift; sourceTree = "<group>"; };
+		EFEB776B2B69A3AF004FA9A8 /* TextInputViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputViews.swift; sourceTree = "<group>"; };
+		EFFB1D192B6C467500E25C89 /* QuestionnaireButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF51D60C2AF0FA7C0081CD36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4FADAA2B8A45DC00257A8A /* NMRepository in Frameworks */,
+				EF51D6412AF0FC0D0081CD36 /* PencilKit.framework in Frameworks */,
+				EF51D63F2AF0FBDE0081CD36 /* PDFKit.framework in Frameworks */,
+				EF4FADA82B8A45DC00257A8A /* NMModel in Frameworks */,
+				EFFE51FE2B8A5500008856A1 /* GenericNetworking in Frameworks */,
+				EF4FADAC2B8A45DC00257A8A /* NMServices in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF51D61D2AF0FA7F0081CD36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF51D6272AF0FA7F0081CD36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF2C7E852B62A757006B94A6 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				EF2C7E832B62A74A006B94A6 /* CanvasView.swift */,
+				EF2C7E862B62BDC9006B94A6 /* CanvasCoordinator.swift */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		EF2C7E8A2B62CFF2006B94A6 /* Questionnaire Submit */ = {
+			isa = PBXGroup;
+			children = (
+				EF4FAD982B8A265100257A8A /* Questionnaire Preview */,
+				EF4FAD992B8A265E00257A8A /* PDF Submit */,
+			);
+			path = "Questionnaire Submit";
+			sourceTree = "<group>";
+		};
+		EF4FAD972B8A210800257A8A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EFC933622B69540C00DB3BB1 /* Loading */,
+				EFB1E19E2B6D7D24008C1B77 /* SectionHeaderView.swift */,
+				EF51A26D2B73CCB100537099 /* CardView.swift */,
+				EFDFC1D52B6A711800FE44B9 /* Color+Custom.swift */,
+				EFEB776B2B69A3AF004FA9A8 /* TextInputViews.swift */,
+				EF4FAD8B2B88468000257A8A /* ErrorView.swift */,
+				EF4FAD9B2B8A276600257A8A /* NMProgressView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EF4FAD982B8A265100257A8A /* Questionnaire Preview */ = {
+			isa = PBXGroup;
+			children = (
+				EF2C7E8F2B62D936006B94A6 /* QuestionPreviewView.swift */,
+				EF3379A32B80DB9A00B5E9ED /* QuestionPreviewButton.swift */,
+				EF2C7E8D2B62D0E1006B94A6 /* QuestionnairePreviewView.swift */,
+			);
+			path = "Questionnaire Preview";
+			sourceTree = "<group>";
+		};
+		EF4FAD992B8A265E00257A8A /* PDF Submit */ = {
+			isa = PBXGroup;
+			children = (
+				EF3379A52B80F51D00B5E9ED /* PDFSubmitView.swift */,
+				EF4FAD8D2B8852ED00257A8A /* PDFSubmitViewModel.swift */,
+			);
+			path = "PDF Submit";
+			sourceTree = "<group>";
+		};
+		EF4FAD9A2B8A26BF00257A8A /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D5542B588545008AAEDD /* QuestionView.swift */,
+				EFB1E1A02B6D9689008C1B77 /* ToggleView.swift */,
+				EFFB1D192B6C467500E25C89 /* QuestionnaireButton.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		EF4FAD9D2B8A374B00257A8A /* Signature */ = {
+			isa = PBXGroup;
+			children = (
+				EF4FAD932B891C6F00257A8A /* SignatureView.swift */,
+				EF2C7E852B62A757006B94A6 /* Canvas */,
+			);
+			path = Signature;
+			sourceTree = "<group>";
+		};
+		EF4FADA02B8A3F8600257A8A /* Introduction */ = {
+			isa = PBXGroup;
+			children = (
+				EF4FAD912B891A2900257A8A /* IntroductionView.swift */,
+			);
+			path = Introduction;
+			sourceTree = "<group>";
+		};
+		EF51D6062AF0FA7C0081CD36 = {
+			isa = PBXGroup;
+			children = (
+				EF9EB7452B7C13F200961BDD /* Packages */,
+				EF51D6112AF0FA7C0081CD36 /* pzunm-upitnik */,
+				EF51D6232AF0FA7F0081CD36 /* pzunm-upitnikTests */,
+				EF51D62D2AF0FA7F0081CD36 /* pzunm-upitnikUITests */,
+				EF51D6102AF0FA7C0081CD36 /* Products */,
+				EF51D63D2AF0FBDD0081CD36 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF51D6102AF0FA7C0081CD36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF51D60F2AF0FA7C0081CD36 /* pzunm-upitnik.app */,
+				EF51D6202AF0FA7F0081CD36 /* pzunm-upitnikTests.xctest */,
+				EF51D62A2AF0FA7F0081CD36 /* pzunm-upitnikUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF51D6112AF0FA7C0081CD36 /* pzunm-upitnik */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D5862B5EAD96008AAEDD /* Info.plist */,
+				EFE1D5592B59B202008AAEDD /* View */,
+				EFE1D5832B5B25DC008AAEDD /* Coordinator */,
+				EF51D6122AF0FA7C0081CD36 /* QuestionnaireApp.swift */,
+				EF4FAD8F2B885B9400257A8A /* DependencyAssembler.swift */,
+				EF4FAD732B85FA7C00257A8A /* Bundle+Version.swift */,
+				EF51D6162AF0FA7F0081CD36 /* Assets.xcassets */,
+				EF51D61B2AF0FA7F0081CD36 /* pzunm_upitnik.entitlements */,
+				EF51D6182AF0FA7F0081CD36 /* Preview Content */,
+			);
+			path = "pzunm-upitnik";
+			sourceTree = "<group>";
+		};
+		EF51D6182AF0FA7F0081CD36 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EF51D6192AF0FA7F0081CD36 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EF51D6232AF0FA7F0081CD36 /* pzunm-upitnikTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF51D6242AF0FA7F0081CD36 /* pzunm_upitnikTests.swift */,
+			);
+			path = "pzunm-upitnikTests";
+			sourceTree = "<group>";
+		};
+		EF51D62D2AF0FA7F0081CD36 /* pzunm-upitnikUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF51D62E2AF0FA7F0081CD36 /* pzunm_upitnikUITests.swift */,
+				EF51D6302AF0FA7F0081CD36 /* pzunm_upitnikUITestsLaunchTests.swift */,
+			);
+			path = "pzunm-upitnikUITests";
+			sourceTree = "<group>";
+		};
+		EF51D63D2AF0FBDD0081CD36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF51D6402AF0FC0D0081CD36 /* PencilKit.framework */,
+				EF51D63E2AF0FBDE0081CD36 /* PDFKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF9EB7452B7C13F200961BDD /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				EFE580D12B8A5344004D5B33 /* GenericNetworking */,
+				EF4FADA62B8A432D00257A8A /* NMModel */,
+				EF4FADA42B8A42EE00257A8A /* NMServices */,
+				EF4FADA32B8A41BB00257A8A /* NMRepository */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		EF9EB7552B7FCF5100961BDD /* Questionnaire Step Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF4FAD9A2B8A26BF00257A8A /* Question */,
+				EF4FADA02B8A3F8600257A8A /* Introduction */,
+				EF4FAD9D2B8A374B00257A8A /* Signature */,
+			);
+			path = "Questionnaire Step Views";
+			sourceTree = "<group>";
+		};
+		EFC933622B69540C00DB3BB1 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				EFC9335E2B6953A300DB3BB1 /* LoadingState.swift */,
+				EFC933602B6953E600DB3BB1 /* LoadingObject.swift */,
+				EFC933632B69555A00DB3BB1 /* LoadingView.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		EFE1D5592B59B202008AAEDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D5612B5A9F1F008AAEDD /* Main */,
+				EFE1D5622B5A9F34008AAEDD /* Certificate */,
+				EF4FAD972B8A210800257A8A /* Components */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EFE1D5612B5A9F1F008AAEDD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EFEB776D2B69A3CB004FA9A8 /* Authentication */,
+				EFEB776E2B69A3E5004FA9A8 /* Certificates */,
+				EFE1D55E2B5A9EEC008AAEDD /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EFE1D5622B5A9F34008AAEDD /* Certificate */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D5632B5A9F3F008AAEDD /* Questionnaire */,
+				EFE1D5642B5A9F4D008AAEDD /* Languages */,
+			);
+			path = Certificate;
+			sourceTree = "<group>";
+		};
+		EFE1D5632B5A9F3F008AAEDD /* Questionnaire */ = {
+			isa = PBXGroup;
+			children = (
+				EF9EB7552B7FCF5100961BDD /* Questionnaire Step Views */,
+				EF2C7E8A2B62CFF2006B94A6 /* Questionnaire Submit */,
+				EFE1D5522B5821B5008AAEDD /* QuestionnaireViewModel.swift */,
+				EFE1D5562B59A56C008AAEDD /* QuestionnaireView.swift */,
+			);
+			path = Questionnaire;
+			sourceTree = "<group>";
+		};
+		EFE1D5642B5A9F4D008AAEDD /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D55C2B5A9EDF008AAEDD /* LanguagesView.swift */,
+			);
+			path = Languages;
+			sourceTree = "<group>";
+		};
+		EFE1D5832B5B25DC008AAEDD /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D5812B5B1831008AAEDD /* CoordinatorView.swift */,
+				EFE1D5842B5B25F6008AAEDD /* CoordinatorViewModel.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EFEB776D2B69A3CB004FA9A8 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D57E2B5AB774008AAEDD /* AuthenticationViewModel.swift */,
+				EFC933672B69823D00DB3BB1 /* AuthenticationView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		EFEB776E2B69A3E5004FA9A8 /* Certificates */ = {
+			isa = PBXGroup;
+			children = (
+				EFC933652B69822700DB3BB1 /* CertificatesViewModel.swift */,
+				EF8DA5952B5F296600738D84 /* CertificateListItemView.swift */,
+				EFEB77692B69A2C4004FA9A8 /* CertificatesView.swift */,
+			);
+			path = Certificates;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF51D60E2AF0FA7C0081CD36 /* pzunm-upitnik */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF51D6342AF0FA7F0081CD36 /* Build configuration list for PBXNativeTarget "pzunm-upitnik" */;
+			buildPhases = (
+				EF51D60B2AF0FA7C0081CD36 /* Sources */,
+				EF51D60C2AF0FA7C0081CD36 /* Frameworks */,
+				EF51D60D2AF0FA7C0081CD36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "pzunm-upitnik";
+			packageProductDependencies = (
+				EF4FADA72B8A45DC00257A8A /* NMModel */,
+				EF4FADA92B8A45DC00257A8A /* NMRepository */,
+				EF4FADAB2B8A45DC00257A8A /* NMServices */,
+				EFFE51FD2B8A5500008856A1 /* GenericNetworking */,
+			);
+			productName = "pzunm-upitnik";
+			productReference = EF51D60F2AF0FA7C0081CD36 /* pzunm-upitnik.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF51D61F2AF0FA7F0081CD36 /* pzunm-upitnikTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF51D6372AF0FA7F0081CD36 /* Build configuration list for PBXNativeTarget "pzunm-upitnikTests" */;
+			buildPhases = (
+				EF51D61C2AF0FA7F0081CD36 /* Sources */,
+				EF51D61D2AF0FA7F0081CD36 /* Frameworks */,
+				EF51D61E2AF0FA7F0081CD36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF51D6222AF0FA7F0081CD36 /* PBXTargetDependency */,
+			);
+			name = "pzunm-upitnikTests";
+			productName = "pzunm-upitnikTests";
+			productReference = EF51D6202AF0FA7F0081CD36 /* pzunm-upitnikTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF51D6292AF0FA7F0081CD36 /* pzunm-upitnikUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF51D63A2AF0FA7F0081CD36 /* Build configuration list for PBXNativeTarget "pzunm-upitnikUITests" */;
+			buildPhases = (
+				EF51D6262AF0FA7F0081CD36 /* Sources */,
+				EF51D6272AF0FA7F0081CD36 /* Frameworks */,
+				EF51D6282AF0FA7F0081CD36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF51D62C2AF0FA7F0081CD36 /* PBXTargetDependency */,
+			);
+			name = "pzunm-upitnikUITests";
+			productName = "pzunm-upitnikUITests";
+			productReference = EF51D62A2AF0FA7F0081CD36 /* pzunm-upitnikUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF51D6072AF0FA7C0081CD36 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					EF51D60E2AF0FA7C0081CD36 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					EF51D61F2AF0FA7F0081CD36 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = EF51D60E2AF0FA7C0081CD36;
+					};
+					EF51D6292AF0FA7F0081CD36 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = EF51D60E2AF0FA7C0081CD36;
+					};
+				};
+			};
+			buildConfigurationList = EF51D60A2AF0FA7C0081CD36 /* Build configuration list for PBXProject "pzunm-upitnik" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				tr,
+				"sr-RS",
+				ru,
+				"sq-AL",
+			);
+			mainGroup = EF51D6062AF0FA7C0081CD36;
+			productRefGroup = EF51D6102AF0FA7C0081CD36 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF51D60E2AF0FA7C0081CD36 /* pzunm-upitnik */,
+				EF51D61F2AF0FA7F0081CD36 /* pzunm-upitnikTests */,
+				EF51D6292AF0FA7F0081CD36 /* pzunm-upitnikUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF51D60D2AF0FA7C0081CD36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF51D61A2AF0FA7F0081CD36 /* Preview Assets.xcassets in Resources */,
+				EF51D6172AF0FA7F0081CD36 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF51D61E2AF0FA7F0081CD36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF51D6282AF0FA7F0081CD36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF51D60B2AF0FA7C0081CD36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4FAD8E2B8852ED00257A8A /* PDFSubmitViewModel.swift in Sources */,
+				EFE1D55D2B5A9EDF008AAEDD /* LanguagesView.swift in Sources */,
+				EF2C7E842B62A74A006B94A6 /* CanvasView.swift in Sources */,
+				EFC9335F2B6953A300DB3BB1 /* LoadingState.swift in Sources */,
+				EF4FAD922B891A2900257A8A /* IntroductionView.swift in Sources */,
+				EF8DA5962B5F296600738D84 /* CertificateListItemView.swift in Sources */,
+				EFB1E19F2B6D7D24008C1B77 /* SectionHeaderView.swift in Sources */,
+				EF4FAD902B885B9400257A8A /* DependencyAssembler.swift in Sources */,
+				EFC933662B69822700DB3BB1 /* CertificatesViewModel.swift in Sources */,
+				EFE1D57F2B5AB774008AAEDD /* AuthenticationViewModel.swift in Sources */,
+				EFC933682B69823D00DB3BB1 /* AuthenticationView.swift in Sources */,
+				EFC933612B6953E600DB3BB1 /* LoadingObject.swift in Sources */,
+				EF51A26E2B73CCB100537099 /* CardView.swift in Sources */,
+				EFEB776A2B69A2C4004FA9A8 /* CertificatesView.swift in Sources */,
+				EF4FAD9C2B8A276600257A8A /* NMProgressView.swift in Sources */,
+				EF2C7E902B62D936006B94A6 /* QuestionPreviewView.swift in Sources */,
+				EF51D6132AF0FA7C0081CD36 /* QuestionnaireApp.swift in Sources */,
+				EFE1D55F2B5A9EEC008AAEDD /* MainView.swift in Sources */,
+				EFFB1D1A2B6C467500E25C89 /* QuestionnaireButton.swift in Sources */,
+				EF3379A42B80DB9A00B5E9ED /* QuestionPreviewButton.swift in Sources */,
+				EFE1D5572B59A56C008AAEDD /* QuestionnaireView.swift in Sources */,
+				EFB1E1A12B6D9689008C1B77 /* ToggleView.swift in Sources */,
+				EFEB776C2B69A3AF004FA9A8 /* TextInputViews.swift in Sources */,
+				EF4FAD8C2B88468000257A8A /* ErrorView.swift in Sources */,
+				EF4FAD742B85FA7C00257A8A /* Bundle+Version.swift in Sources */,
+				EF2C7E8E2B62D0E1006B94A6 /* QuestionnairePreviewView.swift in Sources */,
+				EFE1D5532B5821B5008AAEDD /* QuestionnaireViewModel.swift in Sources */,
+				EFE1D5822B5B1831008AAEDD /* CoordinatorView.swift in Sources */,
+				EF2C7E872B62BDC9006B94A6 /* CanvasCoordinator.swift in Sources */,
+				EFDFC1D62B6A711800FE44B9 /* Color+Custom.swift in Sources */,
+				EF4FAD942B891C6F00257A8A /* SignatureView.swift in Sources */,
+				EFE1D5552B588546008AAEDD /* QuestionView.swift in Sources */,
+				EFC933642B69555A00DB3BB1 /* LoadingView.swift in Sources */,
+				EFE1D5852B5B25F6008AAEDD /* CoordinatorViewModel.swift in Sources */,
+				EF3379A62B80F51D00B5E9ED /* PDFSubmitView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF51D61C2AF0FA7F0081CD36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF51D6252AF0FA7F0081CD36 /* pzunm_upitnikTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF51D6262AF0FA7F0081CD36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF51D6312AF0FA7F0081CD36 /* pzunm_upitnikUITestsLaunchTests.swift in Sources */,
+				EF51D62F2AF0FA7F0081CD36 /* pzunm_upitnikUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF51D6222AF0FA7F0081CD36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF51D60E2AF0FA7C0081CD36 /* pzunm-upitnik */;
+			targetProxy = EF51D6212AF0FA7F0081CD36 /* PBXContainerItemProxy */;
+		};
+		EF51D62C2AF0FA7F0081CD36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF51D60E2AF0FA7C0081CD36 /* pzunm-upitnik */;
+			targetProxy = EF51D62B2AF0FA7F0081CD36 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EF51D6322AF0FA7F0081CD36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF51D6332AF0FA7F0081CD36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		EF51D6352AF0FA7F0081CD36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "pzunm-upitnik/pzunm_upitnik.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"pzunm-upitnik/Preview Content\"";
+				DEVELOPMENT_TEAM = U25D9X79H8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "pzunm-upitnik/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "NM Upitnik";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kojekude.pzunm-upitnik";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		EF51D6362AF0FA7F0081CD36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "pzunm-upitnik/pzunm_upitnik.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"pzunm-upitnik/Preview Content\"";
+				DEVELOPMENT_TEAM = U25D9X79H8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "pzunm-upitnik/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "NM Upitnik";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kojekude.pzunm-upitnik";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		EF51D6382AF0FA7F0081CD36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Q6J4KJ6N3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kojekude.pzunm-upitnikTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pzunm-upitnik.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pzunm-upitnik";
+			};
+			name = Debug;
+		};
+		EF51D6392AF0FA7F0081CD36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Q6J4KJ6N3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kojekude.pzunm-upitnikTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pzunm-upitnik.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pzunm-upitnik";
+			};
+			name = Release;
+		};
+		EF51D63B2AF0FA7F0081CD36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Q6J4KJ6N3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kojekude.pzunm-upitnikUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "pzunm-upitnik";
+			};
+			name = Debug;
+		};
+		EF51D63C2AF0FA7F0081CD36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Q6J4KJ6N3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kojekude.pzunm-upitnikUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "pzunm-upitnik";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF51D60A2AF0FA7C0081CD36 /* Build configuration list for PBXProject "pzunm-upitnik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF51D6322AF0FA7F0081CD36 /* Debug */,
+				EF51D6332AF0FA7F0081CD36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF51D6342AF0FA7F0081CD36 /* Build configuration list for PBXNativeTarget "pzunm-upitnik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF51D6352AF0FA7F0081CD36 /* Debug */,
+				EF51D6362AF0FA7F0081CD36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF51D6372AF0FA7F0081CD36 /* Build configuration list for PBXNativeTarget "pzunm-upitnikTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF51D6382AF0FA7F0081CD36 /* Debug */,
+				EF51D6392AF0FA7F0081CD36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF51D63A2AF0FA7F0081CD36 /* Build configuration list for PBXNativeTarget "pzunm-upitnikUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF51D63B2AF0FA7F0081CD36 /* Debug */,
+				EF51D63C2AF0FA7F0081CD36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF4FADA72B8A45DC00257A8A /* NMModel */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NMModel;
+		};
+		EF4FADA92B8A45DC00257A8A /* NMRepository */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NMRepository;
+		};
+		EF4FADAB2B8A45DC00257A8A /* NMServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NMServices;
+		};
+		EFFE51FD2B8A5500008856A1 /* GenericNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GenericNetworking;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = EF51D6072AF0FA7C0081CD36 /* Project object */;
+}

@@ -1,0 +1,28 @@
+{
+    "language": "Türkçe",
+    "introduction": "Sayın, bu bize önceki sağlık durumunuz hakkında fikir veren bir ankettir. Lütfen soruları dikkatlice okuyun ve doğru cevabı daire içine alarak dürüstçe cevaplayın. Sorunun cevabı olumlu ise cevabın altındaki boş satırda daha detaylı olarak açıklayınız. Cevabınızın gerçekliğini kendi imzanızla garanti ediyorsunuz.",
+    "title": "TIBBİ SERTİFİKA ANKETİ",
+    "questions": [
+        {"index": 1, "formulation": "Herhangi bir doğal veya sonradan edinilmiş göz hastalığınız oldu mu veya var mı?"},
+        {"index": 2, "formulation": "Doğuştan veya sonradan işitme veya denge organları hastalığınız oldu mu veya var mı?"},
+        {"index": 3, "formulation": "Herhangi bir akıl hastalığınız var mı?"},
+        {"index": 4, "formulation": "Bir bağımlılık (alkolizm, uyuşturucu bağımlılığı, psikotrop maddelerin kötüye kullanımı) yaşadınız mı veya muzdarip misiniz?"},
+        {"index": 5, "formulation": "Epilepsi veya diğer bazı bilinç bozukluklarından muzdarip misiniz?"},
+        {"index": 6, "formulation": "Hiç uygunsuz davranışlara meyilli oldunuz mu (kanunla ihtilafa düştünüz mü veya belirgin sosyal ve duygusal istikrar gösterdiniz mi)?"},
+        {"index": 7, "formulation": "Aşağıdaki hastalıklardan herhangi birinden muzdarip misiniz: Multipl skleroz, Parkinson hastalığı?"},
+        {"index": 8, "formulation": "Kalp ve kan damarı hastalıklarınız oldu mu veya var mı?"},
+        {"index": 9, "formulation": "Solunum sistemi hastalığınız oldu mu veya var mı?"},
+        {"index": 10, "formulation": "Şeker hastalığınız var mı?"},
+        {"index": 11, "formulation": "Şimdiye kadar klinik tedavi gördünüz mü?"},
+        {"index": 12, "formulation": "Hiç ameliyat oldunuz mu?"},
+        {"index": 13, "formulation": "Ara sıra veya sürekli olarak ilaç alıyor musunuz?"}
+    ],
+    "signature": "İmza",
+    "yes": "EVET",
+    "no": "HAYIR",
+    "confirm": "Onayla",
+    "eraseSignature": "İmzayı Sil",
+    "submit": "Gönder",
+    "cancel": "İptal",
+    "explanation": "Açıklama"
+}

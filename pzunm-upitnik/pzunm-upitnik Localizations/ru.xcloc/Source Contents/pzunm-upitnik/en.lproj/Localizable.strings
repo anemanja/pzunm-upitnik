@@ -1,0 +1,15 @@
+/* Label that details the instructions for using the questionnaire. */
+"Introduction" = "Introduction";
+
+/* No comment provided by engineer. */
+"LocalizationKeys.General.title" = "LocalizationKeys.General.title";
+
+/* Label for the questions section. */
+"Questions" = "Questions";
+
+/* Label instructing the user to sign the questionnaire. */
+"Signature" = "Signature";
+
+/* The main page title. */
+"Title" = "Title";
+

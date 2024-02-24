@@ -1,0 +1,28 @@
+{
+    "language": "Shqip",
+    "introduction": "I dashur aplikant, kjo anketë na jep një pamje në gjendjen tuaj të mëparshme shëndetësore. Ju lutemi lexoni me kujdes dhe përgjigjuni sinqerisht duke shtypur përgjigjen e saktë. Nëse përgjigja është pozitive, shpjegoni më shumë në vijën e poshtme. Ju garantonit kredibilitetin tuaj me nënshkrimin në fund.",
+    "title": "ANKETA PËR CERTIFIKATËN MJEKËSORE",
+    "questions": [
+        {"index": 1, "formulation": "Keni pasur ndonjëherë ndonjë sëmundje natyrale ose të fituara të organeve të shikimit (syve)?"},
+        {"index": 2, "formulation": "Keni pasur ndonjëherë ndonjë defekt kongjenital ose sëmundje të fituara të organeve të dëgjimit (veshëve) ose të ekuilibrit?"},
+        {"index": 3, "formulation": "A vuani nga ndonjë sëmundje mendore?"},
+        {"index": 4, "formulation": "Keni vuajtur ndonjëherë ose keni probleme me varësinë? (alkolizëm, toksikomani, abuzim me substancat)"},
+        {"index": 5, "formulation": "Vuan nga epilepsia ose ndonjë shkallëzim tjetër mendore?"},
+        {"index": 6, "formulation": "A keni qenë ndonjëherë i prirur të sjelljeve të pashkëputura? (shkelja e ligjit ose antisosiale ose papajtueshmëri emocionale)"},
+        {"index": 7, "formulation": "A vuani nga disa nga sëmundjet vijuese: skleroza multiple, sëmundja e Parkinsonit?"},
+        {"index": 8, "formulation": "Keni pasur ndonjëherë probleme me zemrën ose sëmundje të enëve të gjakut?"},
+        {"index": 9, "formulation": "Keni qenë ndonjëherë i sëmurë ose keni vuajtur nga sëmundja e organeve të frymëmarrjes?"},
+        {"index": 10, "formulation": "A vuani nga sëmundja e sheqerit (nivel i lartë i sheqerit në gjak)?"},
+        {"index": 11, "formulation": "A keni qenë ndonjëherë trajtuar klinikisht?"},
+        {"index": 12, "formulation": "A keni pasur ndonjëherë ndonjë operacion kirurgjikal?"},
+        {"index": 13, "formulation": "Merrni ndonjëherë ose rregullisht ndonjë medikament?"}
+    ],
+    "signature": "Nënshkrim",
+    "yes": "PO",
+    "no": "JO",
+    "confirm": "Konfirmo",
+    "eraseSignature": "Fshij nënshkrimin",
+    "submit": "Dërgo",
+    "cancel": "Anulo",
+    "explanation": "Shpjegim"
+}
