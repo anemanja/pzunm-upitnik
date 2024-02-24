@@ -6,10 +6,9 @@
 //
 
 import Foundation
-import Networking
 
 public enum GenericError: Error, CustomStringConvertible {
-    case networkError(error: NetworkError)
+    case networkError(error: Error)
     case customError(message: String)
     case resolveDependency(dependency: String)
     
@@ -27,7 +26,7 @@ public enum GenericError: Error, CustomStringConvertible {
     public var description: String {
         switch self {
         case .networkError(let error):
-            return error.rawValue
+            return error.localizedDescription
         case .customError(let message):
             return message
         case .resolveDependency(let dependancy):

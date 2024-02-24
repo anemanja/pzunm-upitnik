@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Networking
+import GenericNetworking
 import NMServices
 import NMModel
 

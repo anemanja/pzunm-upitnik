@@ -61,9 +61,3 @@ struct ErrorView: View {
         .background(Color.nmBackground)
     }
 }
-
-struct ErrorView_Previews: PreviewProvider {
-    static var previews: some View {
-        ErrorView(.networkError(error: .invalidServerResponse)) {}
-    }
-}

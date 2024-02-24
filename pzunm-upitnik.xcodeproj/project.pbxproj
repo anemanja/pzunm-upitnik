@@ -33,7 +33,6 @@
 		EF51D63F2AF0FBDE0081CD36 /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF51D63E2AF0FBDE0081CD36 /* PDFKit.framework */; };
 		EF51D6412AF0FC0D0081CD36 /* PencilKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF51D6402AF0FC0D0081CD36 /* PencilKit.framework */; };
 		EF8DA5962B5F296600738D84 /* CertificateListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8DA5952B5F296600738D84 /* CertificateListItemView.swift */; };
-		EF9EB7502B7C2F5B00961BDD /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = EF9EB74F2B7C2F5B00961BDD /* Networking */; };
 		EFB1E19F2B6D7D24008C1B77 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB1E19E2B6D7D24008C1B77 /* SectionHeaderView.swift */; };
 		EFB1E1A12B6D9689008C1B77 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB1E1A02B6D9689008C1B77 /* ToggleView.swift */; };
 		EFC9335F2B6953A300DB3BB1 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC9335E2B6953A300DB3BB1 /* LoadingState.swift */; };
@@ -53,6 +52,7 @@
 		EFEB776A2B69A2C4004FA9A8 /* CertificatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEB77692B69A2C4004FA9A8 /* CertificatesView.swift */; };
 		EFEB776C2B69A3AF004FA9A8 /* TextInputViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEB776B2B69A3AF004FA9A8 /* TextInputViews.swift */; };
 		EFFB1D1A2B6C467500E25C89 /* QuestionnaireButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB1D192B6C467500E25C89 /* QuestionnaireButton.swift */; };
+		EFFE51FE2B8A5500008856A1 /* GenericNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = EFFE51FD2B8A5500008856A1 /* GenericNetworking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +103,6 @@
 		EF51D63E2AF0FBDE0081CD36 /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/PDFKit.framework; sourceTree = DEVELOPER_DIR; };
 		EF51D6402AF0FC0D0081CD36 /* PencilKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PencilKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/PencilKit.framework; sourceTree = DEVELOPER_DIR; };
 		EF8DA5952B5F296600738D84 /* CertificateListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateListItemView.swift; sourceTree = "<group>"; };
-		EF9EB7472B7C145B00961BDD /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Networking; path = ../Networking/Networking; sourceTree = "<group>"; };
 		EFB1E19E2B6D7D24008C1B77 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		EFB1E1A02B6D9689008C1B77 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
 		EFC9335E2B6953A300DB3BB1 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
@@ -121,6 +120,7 @@
 		EFE1D5812B5B1831008AAEDD /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		EFE1D5842B5B25F6008AAEDD /* CoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorViewModel.swift; sourceTree = "<group>"; };
 		EFE1D5862B5EAD96008AAEDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EFE580D12B8A5344004D5B33 /* GenericNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = GenericNetworking; path = "pzunm-upitnik/GenericNetworking"; sourceTree = "<group>"; };
 		EFEB77692B69A2C4004FA9A8 /* CertificatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatesView.swift; sourceTree = "<group>"; };
 		EFEB776B2B69A3AF004FA9A8 /* TextInputViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputViews.swift; sourceTree = "<group>"; };
 		EFFB1D192B6C467500E25C89 /* QuestionnaireButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireButton.swift; sourceTree = "<group>"; };
@@ -132,10 +132,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF4FADAA2B8A45DC00257A8A /* NMRepository in Frameworks */,
-				EF9EB7502B7C2F5B00961BDD /* Networking in Frameworks */,
 				EF51D6412AF0FC0D0081CD36 /* PencilKit.framework in Frameworks */,
 				EF51D63F2AF0FBDE0081CD36 /* PDFKit.framework in Frameworks */,
 				EF4FADA82B8A45DC00257A8A /* NMModel in Frameworks */,
+				EFFE51FE2B8A5500008856A1 /* GenericNetworking in Frameworks */,
 				EF4FADAC2B8A45DC00257A8A /* NMServices in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,10 +310,10 @@
 		EF9EB7452B7C13F200961BDD /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				EFE580D12B8A5344004D5B33 /* GenericNetworking */,
 				EF4FADA62B8A432D00257A8A /* NMModel */,
 				EF4FADA42B8A42EE00257A8A /* NMServices */,
 				EF4FADA32B8A41BB00257A8A /* NMRepository */,
-				EF9EB7472B7C145B00961BDD /* Networking */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -431,10 +431,10 @@
 			);
 			name = "pzunm-upitnik";
 			packageProductDependencies = (
-				EF9EB74F2B7C2F5B00961BDD /* Networking */,
 				EF4FADA72B8A45DC00257A8A /* NMModel */,
 				EF4FADA92B8A45DC00257A8A /* NMRepository */,
 				EF4FADAB2B8A45DC00257A8A /* NMServices */,
+				EFFE51FD2B8A5500008856A1 /* GenericNetworking */,
 			);
 			productName = "pzunm-upitnik";
 			productReference = EF51D60F2AF0FA7C0081CD36 /* pzunm-upitnik.app */;
@@ -940,9 +940,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = NMServices;
 		};
-		EF9EB74F2B7C2F5B00961BDD /* Networking */ = {
+		EFFE51FD2B8A5500008856A1 /* GenericNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Networking;
+			productName = GenericNetworking;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -19,7 +19,7 @@ let package = Package(
         // .package(url: /* package url */, from: "1.0.0"),
         .package(path: "../NMModel"),
         .package(path: "../NMServices"),
-        .package(path: "../Networking")
+        .package(path: "../GenericNetworking")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -29,7 +29,7 @@ let package = Package(
             dependencies: [
                 .product(name: "NMModel", package: "NMModel"),
                 .product(name: "NMServices", package: "NMServices"),
-                .product(name: "Networking", package: "Networking")
+                .product(name: "GenericNetworking", package: "GenericNetworking")
             ]),
         .testTarget(
             name: "NMRepositoryTests",

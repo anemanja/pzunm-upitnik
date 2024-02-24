@@ -6,12 +6,12 @@
 //
 
 import Foundation
-import Networking
+import GenericNetworking
 
 public class NMAPIClientWrapper {
     let apiClient = APIClient<Endpoint>(dataParser: DataParser.json,
-                                                responseParser: ResponseParser(),
-                                                requestBuilder: NMRequestBuilder())
+                                        responseParser: ResponseParser(),
+                                        requestBuilder: NMRequestBuilder())
 
     public init() {}
 }

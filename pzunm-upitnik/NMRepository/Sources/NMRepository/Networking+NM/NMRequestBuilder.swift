@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Networking
+import GenericNetworking
 
 public class NMRequestBuilder: RequestBuilderProtocol {
     private var request: URLRequest?

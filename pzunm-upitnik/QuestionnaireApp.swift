@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Networking
+import GenericNetworking
 
 @main
 struct QuestionnaireApp: App {

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Networking
+import GenericNetworking
 
 public enum Endpoint: String, APIEndpointProtocol {
     case certificates = "a507bdd25b6371e98cba"
